@@ -12,6 +12,10 @@ body {
   color: #f4f2ef;
   font-family: "DM Sans", sans-serif;
   overflow-x: hidden;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 a {
@@ -85,77 +89,175 @@ a {
   border-color: #fff;
 }
 
-/* Content Layout */
-.content-container {
-  max-width: 1000px;
+/* Main Content & Accordion Section */
+.main-content {
+  max-width: 1280px;
   margin: 0 auto;
-  padding: 60px 20px;
+  padding: 40px 20px;
+  width: 100%;
 }
 
-.hero-section {
-  margin-bottom: 60px;
+.section-intro {
+  text-align: center;
+  margin-bottom: 40px;
 }
 
-.hero-title {
-  font: 800 2.8rem Manrope, sans-serif;
-  margin: 0 0 15px 0;
+.section-intro h1 {
+  font: 800 2.4rem Manrope, sans-serif;
+  margin: 0 0 10px 0;
   color: #f4f2ef;
 }
 
-.hero-subtitle {
-  font-size: 1.1rem;
-  color: #999;
-  line-height: 1.6;
-  max-width: 600px;
+.section-intro p {
+  color: #888;
+  font-size: 0.95rem;
   margin: 0;
 }
 
-/* Portfolio Cards Grid */
-.portfolio-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 20px;
+/* Horizontal Sliding Accordion Container */
+.accordion-wrapper {
+  display: flex;
+  gap: 12px;
+  height: 480px;
+  width: 100%;
+  margin-bottom: 40px;
 }
 
-.card {
-  background: #0b0b0b;
-  border: 1px solid rgba(255, 255, 255, 0.1);
-  border-radius: 16px;
+/* Individual Accordion Panel */
+.accordion-card {
+  flex: 1;
+  background: linear-gradient(145deg, #0d0d0d 0%, #060606 100%);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  overflow: hidden;
+  position: relative;
+  cursor: pointer;
+  transition: flex 0.6s cubic-bezier(0.16, 1, 0.3, 1), border-color 0.4s ease, background 0.4s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
   padding: 30px;
-  transition: border-color 0.3s ease, transform 0.3s ease;
 }
 
-.card:hover {
-  border-color: rgba(255, 255, 25, 0.3);
-  transform: translateY(-4px);
+/* Hover / Active Expanded State */
+.accordion-card:hover,
+.accordion-card.active {
+  flex: 3.5;
+  border-color: rgba(255, 255, 255, 0.25);
+  background: linear-gradient(145deg, #161616 0%, #0a0a0a 100%);
 }
 
-.card-number {
+/* Vertical Title when collapsed */
+.card-vertical-title {
+  position: absolute;
+  bottom: 30px;
+  left: 50%;
+  transform: translateX(-50%) rotate(-90deg);
+  transform-origin: bottom center;
+  white-space: nowrap;
+  font-size: 0.85rem;
+  letter-spacing: 2px;
+  text-transform: uppercase;
+  color: #888;
+  transition: opacity 0.3s ease;
+}
+
+.accordion-card:hover .card-vertical-title,
+.accordion-card.active .card-vertical-title {
+  opacity: 0;
+  pointer-events: none;
+}
+
+/* Expanded Content */
+.card-content {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.4s ease 0.1s, transform 0.4s ease 0.1s;
+  pointer-events: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  height: 100%;
+}
+
+.accordion-card:hover .card-content,
+.accordion-card.active .card-content {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: auto;
+}
+
+.card-num {
   font-size: 0.75rem;
   color: #777;
-  letter-spacing: 1px;
+  letter-spacing: 1.5px;
+  margin-bottom: 8px;
 }
 
-.card h2 {
-  font-size: 1.5rem;
-  margin: 10px 0;
+.card-title {
+  font: 700 1.6rem Manrope, sans-serif;
+  margin: 0 0 12px 0;
   color: #f4f2ef;
 }
 
-.card p {
+.card-desc {
   color: #999;
   font-size: 0.9rem;
-  line-height: 1.5;
-  margin: 0;
+  line-height: 1.6;
+  margin: 0 0 24px 0;
+  max-width: 380px;
+}
+
+/* Button style */
+.panel-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 24px;
+  background: transparent;
+  color: #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 30px;
+  text-decoration: none;
+  font-size: 0.85rem;
+  letter-spacing: 0.5px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  width: fit-content;
+}
+
+.panel-cta:hover {
+  background: #ffffff;
+  color: #000000;
+  border-color: #ffffff;
+  transform: translateY(-2px);
 }
 
 /* Footer */
 .footer {
   display: flex;
   justify-content: space-between;
-  padding: 40px 6.5vw;
+  padding: 30px 6.5vw;
   border-top: 1px solid #ffffff12;
   font-size: 0.85rem;
   color: #888;
-  margin-top: 80px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 900px) {
+  .accordion-wrapper {
+    flex-direction: column;
+    height: auto;
+  }
+  .accordion-card {
+    height: 110px;
+    flex: none !important;
+  }
+  .accordion-card:hover, .accordion-card.active {
+    height: 320px;
+  }
+  .card-vertical-title {
+    transform: none;
+    left: 30px;
+    bottom: 30px;
+  }
 }
