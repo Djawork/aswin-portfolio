@@ -3,68 +3,55 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#050505">
   <title>Exterior Design — Aswin Biju</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
 </head>
-<body class="subpage-body">
-  <header class="subpage-header">
-    <a href="index.html#home" class="back-link">← BACK TO PORTFOLIO</a>
+<body>
+  <!-- Same ambient background glows as index.html -->
+  <div class="ambient ambient-one"></div>
+  <div class="ambient ambient-two"></div>
+
+  <!-- Same topbar navigation, pointing back home -->
+  <header class="topbar">
+    <a class="brand" href="index.html#home">ASWIN BIJU<span>.</span></a>
     <span class="top-note">EXTERIOR DESIGN COLLECTION</span>
+    <a class="contact-link" href="index.html#contact">LET'S TALK <span>↗</span></a>
   </header>
 
-  <main class="portfolio-section">
-    <div class="section-header">
-      <span class="section-tag">01 / EXTERIOR DESIGN</span>
-      <h2>Architectural Styles</h2>
+  <main style="max-width: 800px; margin: 0 auto; padding: 60px 20px;">
+    <div class="section-header" style="margin-bottom: 40px;">
+      <span class="section-tag" style="font-size: 0.8rem; letter-spacing: 1px; color: #777;">01 / EXTERIOR DESIGN</span>
+      <h2 style="font-size: 2.2rem; margin: 10px 0 0 0; color: #f4f2ef;">Architectural Styles</h2>
     </div>
 
-    <!-- Style 1 -->
-    <div class="style-category">
-      <h3 class="category-title">01. Modern and Contemporary Styles</h3>
-      <div class="project-panel">
-        <span class="project-number">PROJECT 01</span>
-        <h4>Minimalist Concrete Villa</h4>
-        <p class="project-location">Location: [City, Region]</p>
-        <div class="color-palette-container">
-          <span class="palette-label">Color Palette & Materials</span>
-          <div class="color-swatches">
-            <div class="swatch" style="background-color: #2b2b2b;" title="Charcoal"></div>
-            <div class="swatch" style="background-color: #e5e5e5;" title="Raw Concrete"></div>
-            <div class="swatch" style="background-color: #8c7a6b;" title="Teak Wood"></div>
-          </div>
-        </div>
-        <p class="project-desc">Clean geometric massing paired with large glass expanses and exposed concrete textures.</p>
-        <div class="image-wrapper">
-          <img src="modern-render.jpg" alt="Modern Style Exterior">
-        </div>
-        <a href="index.html#contact" class="sliding-button">INQUIRE ABOUT THIS STYLE <span class="arrow">↗</span></a>
-      </div>
+    <!-- Project Panel using your button style -->
+    <div class="project-panel" style="background-color: #0b0b0b; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 12px; padding: 30px; margin-bottom: 30px;">
+      <span class="project-number" style="font-size: 0.75rem; color: #777; letter-spacing: 1px;">PROJECT 01</span>
+      <h4 style="font-size: 1.5rem; margin: 8px 0; color: #f4f2ef;">Minimalist Concrete Villa</h4>
+      <p style="font-size: 0.85rem; color: #999; margin-bottom: 20px;">Location: [City, Region]</p>
+      
+      <p style="font-size: 0.95rem; color: #ccc; line-height: 1.5; margin-bottom: 20px;">
+        Clean geometric massing paired with large glass expanses and exposed concrete textures.
+      </p>
+
+      <!-- Uses your updated button class -->
+      <a href="index.html#contact" class="panel-cta">
+        INQUIRE ABOUT THIS STYLE <span>↗</span>
+      </a>
     </div>
 
-    <!-- Style 2 -->
-    <div class="style-category">
-      <h3 class="category-title">02. Traditional and Classical Styles</h3>
-      <div class="project-panel">
-        <span class="project-number">PROJECT 02</span>
-        <h4>Neo-Classical Estate</h4>
-        <p class="project-location">Location: [City, Region]</p>
-        <div class="color-palette-container">
-          <span class="palette-label">Color Palette & Materials</span>
-          <div class="color-swatches">
-            <div class="swatch" style="background-color: #f7f5f0;" title="Warm Limestone"></div>
-            <div class="swatch" style="background-color: #3b302a;" title="Dark Bronze"></div>
-            <div class="swatch" style="background-color: #8c8275;" title="Sandstone"></div>
-          </div>
-        </div>
-        <p class="project-desc">Symmetrical proportions, classical column detailing, and refined stone finishes.</p>
-        <div class="image-wrapper">
-          <img src="classical-render.jpg" alt="Traditional Style Exterior">
-        </div>
-        <a href="index.html#contact" class="sliding-button">INQUIRE ABOUT THIS STYLE <span class="arrow">↗</span></a>
-      </div>
+    <div style="margin-top: 40px;">
+      <a href="index.html#home" class="panel-cta">← BACK TO PORTFOLIO</a>
     </div>
   </main>
 
-  <footer><span>© 2023 ASWIN</span><a href="index.html#home">BACK TO TOP ↑</a></footer>
+  <footer style="display: flex; justify-content: space-between; padding: 40px 6.5vw; border-top: 1px solid #ffffff12; font-size: 0.85rem; color: #888;">
+    <span>© 2023 ASWIN</span>
+    <a href="#home">BACK TO TOP ↑</a>
+  </footer>
 </body>
 </html>
