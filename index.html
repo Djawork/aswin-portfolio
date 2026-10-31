@@ -1,76 +1,55 @@
-<!doctype html>
-<html lang="en">
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#050505">
-  <title>Aswin Biju — Architecture Portfolio</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
-</head>
-<body id="home">
-  <!-- Ambient background glows -->
-  <div class="ambient ambient-one"></div>
-  <div class="ambient ambient-two"></div>
-
-  <!-- Top bar navigation -->
-  <header class="topbar">
-    <a class="brand" href="#home">ASWIN BIJU<span>.</span></a>
-    <span class="top-note">ARCHITECTURE PORTFOLIO</span>
-    <a class="contact-link" href="#contact" id="contact">LET'S TALK <span>↗</span></a>
-  </header>
-
-  <main style="max-width: 900px; margin: 0 auto; padding: 60px 20px;">
-    <div style="margin-bottom: 50px;">
-      <h1 style="font: 800 2.8rem Manrope, sans-serif; margin: 0 0 15px 0; color: #f4f2ef;">Designing spaces that shape human experience.</h1>
-      <p style="font-size: 1.1rem; color: #999; line-height: 1.6; max-width: 600px; margin: 0;">
-        A collection of architectural concepts, interior spatial studies, precise plans, and regulatory frameworks.
+<div class="accordion-container">
+  
+  <!-- Exterior Design Panel -->
+  <div class="accordion-panel active">
+    <span class="panel-vertical-title">01 / Exterior Design</span>
+    <div class="panel-expanded-content">
+      <span style="font-size: 0.75rem; color: #777; letter-spacing: 1px;">01</span>
+      <h3 style="font-size: 1.8rem; margin: 10px 0; color: #f4f2ef;">Exterior Design</h3>
+      <p style="color: #999; font-size: 0.95rem; margin-bottom: 20px; line-height: 1.5;">
+        Facade concepts, massing studies, and modern architectural exteriors engineered for modern environments.
       </p>
+      <a href="exterior.html" class="panel-cta">VIEW EXTERIOR WORKS <span>↗</span></a>
     </div>
+  </div>
 
-    <!-- Portfolio Category Cards linking to subpages -->
-    <div style="display: grid; gap: 20px;">
-      
-      <!-- Exterior Design Card -->
-      <div style="background: #0b0b0b; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 30px;">
-        <span style="font-size: 0.75rem; color: #777; letter-spacing: 1px;">01</span>
-        <h3 style="font-size: 1.8rem; margin: 10px 0; color: #f4f2ef;">Exterior Design</h3>
-        <p style="color: #999; font-size: 0.95rem; margin-bottom: 20px;">Facade concepts, massing studies, and modern architectural exteriors.</p>
-        <a href="exterior.html" class="panel-cta">VIEW EXTERIOR WORKS <span>↗</span></a>
-      </div>
-
-      <!-- Interior Design Card -->
-      <div style="background: #0b0b0b; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 30px;">
-        <span style="font-size: 0.75rem; color: #777; letter-spacing: 1px;">02</span>
-        <h3 style="font-size: 1.8rem; margin: 10px 0; color: #f4f2ef;">Interior Design</h3>
-        <p style="color: #999; font-size: 0.95rem; margin-bottom: 20px;">Living spaces, custom joinery, lighting layouts, and interior details.</p>
-        <a href="interior.html" class="panel-cta">VIEW INTERIOR WORKS <span>↗</span></a>
-      </div>
-
-      <!-- Plans Card -->
-      <div style="background: #0b0b0b; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 30px;">
-        <span style="font-size: 0.75rem; color: #777; letter-spacing: 1px;">03</span>
-        <h3 style="font-size: 1.8rem; margin: 10px 0; color: #f4f2ef;">Plans & Layouts</h3>
-        <p style="color: #999; font-size: 0.95rem; margin-bottom: 20px;">Floor plans, spatial flow diagrams, and technical schematics.</p>
-        <a href="plans.html" class="panel-cta">VIEW PLANS <span>↗</span></a>
-      </div>
-
-      <!-- Permits Card -->
-      <div style="background: #0b0b0b; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 30px;">
-        <span style="font-size: 0.75rem; color: #777; letter-spacing: 1px;">04</span>
-        <h3 style="font-size: 1.8rem; margin: 10px 0; color: #f4f2ef;">Permits & Documentation</h3>
-        <p style="color: #999; font-size: 0.95rem; margin-bottom: 20px;">Regulatory drawings, zoning reports, and construction documentation.</p>
-        <a href="permits.html" class="panel-cta">VIEW PERMITS <span>↗</span></a>
-      </div>
-
+  <!-- Interior Design Panel -->
+  <div class="accordion-panel">
+    <span class="panel-vertical-title">02 / Interior Design</span>
+    <div class="panel-expanded-content">
+      <span style="font-size: 0.75rem; color: #777; letter-spacing: 1px;">02</span>
+      <h3 style="font-size: 1.8rem; margin: 10px 0; color: #f4f2ef;">Interior Design</h3>
+      <p style="color: #999; font-size: 0.95rem; margin-bottom: 20px; line-height: 1.5;">
+        Living spaces, custom joinery, layered lighting layouts, and refined interior spatial details.
+      </p>
+      <a href="interior.html" class="panel-cta">VIEW INTERIOR WORKS <span>↗</span></a>
     </div>
-  </main>
+  </div>
 
-  <footer style="display: flex; justify-content: space-between; padding: 40px 6.5vw; border-top: 1px solid #ffffff12; font-size: 0.85rem; color: #888; margin-top: 60px;">
-    <span>© ASWIN BIJU</span>
-    <a href="#home">BACK TO TOP ↑</a>
-  </footer>
-</body>
-</html>
+  <!-- Plans Panel -->
+  <div class="accordion-panel">
+    <span class="panel-vertical-title">03 / Plans & Layouts</span>
+    <div class="panel-expanded-content">
+      <span style="font-size: 0.75rem; color: #777; letter-spacing: 1px;">03</span>
+      <h3 style="font-size: 1.8rem; margin: 10px 0; color: #f4f2ef;">Plans & Layouts</h3>
+      <p style="color: #999; font-size: 0.95rem; margin-bottom: 20px; line-height: 1.5;">
+        Floor plans, spatial flow diagrams, and technical schematics optimized for functionality.
+      </p>
+      <a href="plans.html" class="panel-cta">VIEW PLANS <span>↗</span></a>
+    </div>
+  </div>
+
+  <!-- Permits Panel -->
+  <div class="accordion-panel">
+    <span class="panel-vertical-title">04 / Permits</span>
+    <div class="panel-expanded-content">
+      <span style="font-size: 0.75rem; color: #777; letter-spacing: 1px;">04</span>
+      <h3 style="font-size: 1.8rem; margin: 10px 0; color: #f4f2ef;">Permits & Docs</h3>
+      <p style="color: #999; font-size: 0.95rem; margin-bottom: 20px; line-height: 1.5;">
+        Regulatory drawings, zoning compliance reports, and complete construction documentation packages.
+      </p>
+      <a href="permits.html" class="panel-cta">VIEW PERMITS <span>↗</span></a>
+    </div>
+  </div>
+
+</div>
