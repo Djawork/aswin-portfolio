@@ -19,41 +19,62 @@
   <header class="topbar">
     <a class="brand" href="#home">ASWIN BIJU<span>.</span></a>
     <span class="top-note">ARCHITECTURE PORTFOLIO</span>
-    <a class="contact-link" href="#contact">LET'S TALK <span>↗</span></a>
+    <a class="contact-link" href="#contact" id="contact">LET'S TALK <span>↗</span></a>
   </header>
 
-  <!-- Main Content -->
-  <main class="content-container">
-    <section class="hero-section">
-      <h1 class="hero-title">Designing spaces that shape human experience.</h1>
-      <p class="hero-subtitle">A collection of architectural concepts, interior spatial studies, precise plans, and regulatory frameworks.</p>
-    </section>
+  <!-- Main Content with Sliding Accordion -->
+  <main class="main-content">
+    <div class="section-intro">
+      <h1>Designing spaces that shape human experience.</h1>
+      <p>Explore our portfolio collections below.</p>
+    </div>
 
-    <!-- Portfolio Sections -->
-    <div class="portfolio-grid">
-      <div class="card">
-        <span class="card-number">01</span>
-        <h2>Exterior Design</h2>
-        <p>Facade concepts, massing studies, and modern architectural exteriors.</p>
+    <div class="accordion-wrapper">
+      
+      <!-- Card 1: Exterior Design (default active) -->
+      <div class="accordion-card active">
+        <span class="card-vertical-title">Exterior Design</span>
+        <div class="card-content">
+          <span class="card-num">01 / EXTERIOR</span>
+          <h3 class="card-title">Exterior Design</h3>
+          <p class="card-desc">Facade concepts, massing studies, and modern architectural exteriors engineered for the environment.</p>
+          <a href="exterior.html" class="panel-cta">VIEW EXTERIOR WORKS <span>↗</span></a>
+        </div>
       </div>
 
-      <div class="card">
-        <span class="card-number">02</span>
-        <h2>Interior Design</h2>
-        <p>Living spaces, custom joinery, lighting layouts, and interior details.</p>
+      <!-- Card 2: Interior Design -->
+      <div class="accordion-card">
+        <span class="card-vertical-title">Interior Design</span>
+        <div class="card-content">
+          <span class="card-num">02 / INTERIOR</span>
+          <h3 class="card-title">Interior Design</h3>
+          <p class="card-desc">Living spaces, custom joinery, layered lighting layouts, and refined interior spatial details.</p>
+          <a href="interior.html" class="panel-cta">VIEW INTERIOR WORKS <span>↗</span></a>
+        </div>
       </div>
 
-      <div class="card">
-        <span class="card-number">03</span>
-        <h2>Plans & Layouts</h2>
-        <p>Floor plans, spatial flow diagrams, and technical schematics.</p>
+      <!-- Card 3: Plans & Layouts -->
+      <div class="accordion-card">
+        <span class="card-vertical-title">Plans & Layouts</span>
+        <div class="card-content">
+          <span class="card-num">03 / PLANS</span>
+          <h3 class="card-title">Plans & Layouts</h3>
+          <p class="card-desc">Floor plans, spatial flow diagrams, and technical schematics optimized for daily functionality.</p>
+          <a href="plans.html" class="panel-cta">VIEW PLANS <span>↗</span></a>
+        </div>
       </div>
 
-      <div class="card">
-        <span class="card-number">04</span>
-        <h2>Permits & Documentation</h2>
-        <p>Regulatory drawings, zoning reports, and construction documentation.</p>
+      <!-- Card 4: Permits & Documentation -->
+      <div class="accordion-card">
+        <span class="card-vertical-title">Permits & Docs</span>
+        <div class="card-content">
+          <span class="card-num">04 / PERMITS</span>
+          <h3 class="card-title">Permits & Documentation</h3>
+          <p class="card-desc">Regulatory drawings, zoning compliance reports, and complete construction documentation packages.</p>
+          <a href="permits.html" class="panel-cta">VIEW PERMITS <span>↗</span></a>
+        </div>
       </div>
+
     </div>
   </main>
 
