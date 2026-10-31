@@ -4,7 +4,7 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#050505">
-  <meta name="description" content="Exterior Design Projects — Aswin Biju">
+  <meta name="description" content="Exterior Design Collection — Aswin Biju">
   <title>Exterior Design — Aswin Biju</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -12,60 +12,78 @@
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <!-- Ambient background glow effects -->
   <div class="ambient ambient-one"></div>
   <div class="ambient ambient-two"></div>
-
-  <!-- Top bar navigation -->
   <header class="topbar">
-    <a class="brand" href="index.html#home">ASWIN BIJU<span>.</span></a>
+    <a class="brand" href="/aswin-portfolio/index.html" aria-label="Aswin home">ASWIN BIJU<span>.</span></a>
     <span class="top-note">EXTERIOR DESIGN COLLECTION</span>
     <a class="contact-link" href="mailto:artistaswin3@gmail.com">LET'S TALK <span>↗</span></a>
   </header>
 
-  <!-- Main Subpage Content -->
-  <main style="max-width: 900px; margin: 0 auto; padding: 60px 20px;">
-    
-    <div style="margin-bottom: 50px;">
-      <p class="eyebrow" style="font-size: 0.75rem; color: #888; letter-spacing: 1.5px; margin-bottom: 10px;">01 / EXTERIOR ARCHITECTURE</p>
-      <h1 style="font: 800 2.5rem Manrope, sans-serif; margin: 0 0 15px 0; color: #f4f2ef;">Exterior Design & Perspectives</h1>
-      <p style="font-size: 1.05rem; color: #999; line-height: 1.6; max-width: 600px; margin: 0;">
-        Atmospheric exterior renders, material studies, and residential perspectives crafted to harmonize with their environments.
-      </p>
-    </div>
+  <main id="home">
+    <section class="intro">
+      <p class="eyebrow"><span class="eyebrow-line"></span> 01 / EXTERIOR ARCHITECTURE</p>
+      <h1>Spaces shaped<br><em>by environment.</em></h1>
+      <p class="intro-copy">Atmospheric exterior renders, material studies, and residential perspectives.</p>
+    </section>
 
-    <!-- Project Item 1 -->
-    <div style="background: #0b0b0b; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 30px; margin-bottom: 30px;">
-      <span style="font-size: 0.75rem; color: #777; letter-spacing: 1.5px;">PROJECT 01</span>
-      <h3 style="font: 700 1.6rem Manrope, sans-serif; margin: 10px 0; color: #f4f2ef;">Minimalist Concrete Villa</h3>
-      <p style="color: #999; font-size: 0.9rem; line-height: 1.6; margin-bottom: 25px;">
-        Clean geometric massing paired with large glass expanses and exposed raw concrete textures to balance privacy and natural openness.
-      </p>
-      <a href="index.html#contact" class="panel-cta">INQUIRE ABOUT THIS PROJECT <span>↗</span></a>
-    </div>
+    <section class="work-section" aria-label="Exterior categories">
+      <div class="section-heading">
+        <span>EXPLORE EXTERIOR DESIGNS</span>
+        <span class="interaction-hint">HOVER OR SELECT A PANEL <b>↘</b></span>
+      </div>
 
-    <!-- Project Item 2 -->
-    <div style="background: #0b0b0b; border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 16px; padding: 30px; margin-bottom: 50px;">
-      <span style="font-size: 0.75rem; color: #777; letter-spacing: 1.5px;">PROJECT 02</span>
-      <h3 style="font: 700 1.6rem Manrope, sans-serif; margin: 10px 0; color: #f4f2ef;">Cantilevered Timber Residence</h3>
-      <p style="color: #999; font-size: 0.9rem; line-height: 1.6; margin-bottom: 25px;">
-        A contemporary woodland home utilizing deep overhangs, warm wood cladding, and seamless indoor-outdoor thresholds.
-      </p>
-      <a href="index.html#contact" class="panel-cta">INQUIRE ABOUT THIS PROJECT <span>↗</span></a>
-    </div>
+      <div class="accordion" id="accordion">
+        <!-- Category 1: Modern & Contemporary Design -->
+        <article class="panel active" tabindex="0" role="button" aria-expanded="true" data-panel="0">
+          <div class="panel-image image-exterior"></div><div class="panel-shade"></div>
+          <div class="panel-vertical"><span>01</span><span>MODERN & CONTEMPORARY</span></div>
+          <div class="panel-content">
+            <p class="panel-kicker">01 / ARCHITECTURE</p><h2>Modern &<br>Contemporary</h2>
+            <p>Clean geometric massing, large glass expanses, and raw material palettes balancing privacy with natural openness.</p>
+            <a href="mailto:artistaswin3@gmail.com" class="panel-cta">INQUIRE ABOUT THIS <span>↗</span></a>
+          </div>
+        </article>
 
-    <!-- Back Button -->
-    <div>
-      <a href="index.html" class="panel-cta">← BACK TO PORTFOLIO</a>
-    </div>
+        <!-- Category 2: Traditional & Tropical Design -->
+        <article class="panel" tabindex="0" role="button" aria-expanded="false" data-panel="1">
+          <div class="panel-image image-exterior"></div><div class="panel-shade"></div>
+          <div class="panel-vertical"><span>02</span><span>TRADITIONAL & TROPICAL</span></div>
+          <div class="panel-content">
+            <p class="panel-kicker">02 / HERITAGE & CLIMATE</p><h2>Traditional &<br>Tropical</h2>
+            <p>Pitched roofs, deep overhangs, courtyards, and regional vernacular elements designed for climatic comfort.</p>
+            <a href="mailto:artistaswin3@gmail.com" class="panel-cta">INQUIRE ABOUT THIS <span>↗</span></a>
+          </div>
+        </article>
 
+        <!-- Category 3: Cottage & Resorts -->
+        <article class="panel" tabindex="0" role="button" aria-expanded="false" data-panel="2">
+          <div class="panel-image image-exterior"></div><div class="panel-shade"></div>
+          <div class="panel-vertical"><span>03</span><span>COTTAGE & RESORTS</span></div>
+          <div class="panel-content">
+            <p class="panel-kicker">03 / HOSPITALITY</p><h2>Cottage &<br>Resorts</h2>
+            <p>Immersive getaway retreats utilizing warm timber cladding, stone textures, and seamless indoor-outdoor thresholds.</p>
+            <a href="mailto:artistaswin3@gmail.com" class="panel-cta">INQUIRE ABOUT THIS <span>↗</span></a>
+          </div>
+        </article>
+      </div>
+      <p class="mobile-hint">Tap a panel to explore. Tap another to switch.</p>
+    </section>
+
+    <section class="about" id="about">
+      <div><p class="eyebrow"><span class="eyebrow-line"></span> PORTFOLIO NAVIGATION</p><h2>Back to main<br><em>overview.</em></h2></div>
+      <div>
+        <p style="color: #999; font-size: 14px; line-height: 2; margin-bottom: 25px;">Return to the home portfolio to explore interior spaces, technical plans, and municipal permits.</p>
+        <a class="big-mail" href="/aswin-portfolio/index.html" style="font-size: 11px; padding: 0 0 8px;">BACK TO PORTFOLIO <span>↗</span></a>
+      </div>
+    </section>
   </main>
 
-  <!-- Footer -->
   <footer>
     <span>© 2023 ASWIN</span>
     <span>ARCHITECTURAL DRAFTING · 3D DESIGNING</span>
     <a href="#home">BACK TO TOP ↑</a>
   </footer>
+  <script src="script.js"></script>
 </body>
 </html>
