@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   
-  <!-- Clean Vertical Feed Styles -->
+  <!-- Clean Vertical Feed Styles with Left-Aligned Text -->
   <style>
     .accordion {
       display: flex !important;
@@ -30,11 +30,12 @@
       display: block !important;
     }
 
-    /* Force text to top-left corner with increased heading size */
+    /* Force text box strictly to the left edge */
     .panel-content {
       position: absolute !important;
       top: 100px !important;
-      left: 60px !important;
+      left: 0 !important;
+      padding-left: 40px !important;
       bottom: auto !important;
       right: auto !important;
       transform: none !important;
