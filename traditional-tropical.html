@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   
-  <!-- Custom Vertical Fullscreen Layout Styles -->
+  <!-- Custom Vertical Fullscreen & Top-Left Alignment Styles -->
   <style>
     .accordion {
       display: flex !important;
@@ -34,6 +34,32 @@
       transform: none !important;
       display: flex !important;
       gap: 10px !important;
+    }
+
+    /* Move text to top-left corner and increase heading size */
+    .panel-content {
+      position: absolute !important;
+      top: 80px !important;
+      left: 40px !important;
+      bottom: auto !important;
+      right: auto !important;
+      text-align: left !important;
+      max-width: 600px;
+    }
+
+    .panel-content h2 {
+      font-size: 3.5rem !important; /* Increased heading size */
+      line-height: 1.1 !important;
+      margin-bottom: 10px !important;
+    }
+
+    .slide-meta {
+      font-size: 0.9rem;
+      letter-spacing: 1.5px;
+      color: #aaa;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      display: block;
     }
   </style>
 </head>
@@ -61,8 +87,10 @@
           <div class="panel-image" style="background-image: url('1_photo-8.jpg'); background-size: cover; background-position: center;"></div><div class="panel-shade"></div>
           <div class="panel-vertical"><span>01</span><span>TRADITIONAL HOUSE</span></div>
           <div class="panel-content">
-            <p class="panel-kicker">01 / HERITAGE ARCHITECTURE</p><h2>Traditional<br>House</h2>
-            <p>Location : Kurishupara</p>
+            <p class="panel-kicker">01 / HERITAGE ARCHITECTURE</p>
+            <h2>Traditional House</h2>
+            <span class="slide-meta">2023 · Location: Kurishupara</span>
+            <p>Traditional heritage drafting and design.</p>
           </div>
         </article>
 
@@ -71,7 +99,9 @@
           <div class="panel-image" style="background-image: url('courtyard.jpg'); background-size: cover; background-position: center;"></div><div class="panel-shade"></div>
           <div class="panel-vertical"><span>02</span><span>TROPICAL COURTYARD</span></div>
           <div class="panel-content">
-            <p class="panel-kicker">02 / CLIMATE COMFORT</p><h2>Tropical<br>Courtyard</h2>
+            <p class="panel-kicker">02 / CLIMATE COMFORT</p>
+            <h2>Tropical Courtyard</h2>
+            <span class="slide-meta">2023 · Location: Kerala</span>
             <p>Seamless integration of lush internal green spaces, central water bodies, and naturally ventilated open corridors.</p>
           </div>
         </article>
@@ -81,7 +111,9 @@
           <div class="panel-image" style="background-image: url('roof.jpg'); background-size: cover; background-position: center;"></div><div class="panel-shade"></div>
           <div class="panel-vertical"><span>03</span><span>SLOPED TILE ROOFS</span></div>
           <div class="panel-content">
-            <p class="panel-kicker">03 / MONSOON ARCHITECTURE</p><h2>Sloped Tile<br>Roofs</h2>
+            <p class="panel-kicker">03 / MONSOON ARCHITECTURE</p>
+            <h2>Sloped Tile Roofs</h2>
+            <span class="slide-meta">2023 · Location: Kerala</span>
             <p>Classic multi-tiered clay tile roofing designed to handle heavy monsoons with dramatic overhangs and thermal insulation.</p>
           </div>
         </article>
@@ -91,47 +123,57 @@
           <div class="panel-image" style="background-image: url('verandah.jpg'); background-size: cover; background-position: center;"></div><div class="panel-shade"></div>
           <div class="panel-vertical"><span>04</span><span>VERANDAH & JALI SCREENS</span></div>
           <div class="panel-content">
-            <p class="panel-kicker">04 / SHADING & BREEZE</p><h2>Verandah &<br>Jali Screens</h2>
+            <p class="panel-kicker">04 / SHADING & BREEZE</p>
+            <h2>Verandah & Jali Screens</h2>
+            <span class="slide-meta">2023 · Location: Kerala</span>
             <p>Expansive semi-outdoor seating porches paired with intricate terracotta jali ventilation blocks for privacy and airflow.</p>
           </div>
         </article>
 
-        <!-- Duplicated Slide 5 (Copy of Slide 1) -->
+        <!-- Duplicated Slide 5 -->
         <article class="panel" tabindex="0" role="button" aria-expanded="false" data-panel="4">
           <div class="panel-image" style="background-image: url('1_photo-8.jpg'); background-size: cover; background-position: center;"></div><div class="panel-shade"></div>
           <div class="panel-vertical"><span>05</span><span>TRADITIONAL HOUSE</span></div>
           <div class="panel-content">
-            <p class="panel-kicker">05 / HERITAGE ARCHITECTURE</p><h2>Traditional<br>House</h2>
-            <p>Location : Kurishupara</p>
+            <p class="panel-kicker">05 / HERITAGE ARCHITECTURE</p>
+            <h2>Traditional House</h2>
+            <span class="slide-meta">2023 · Location: Kurishupara</span>
+            <p>Traditional heritage drafting and design.</p>
           </div>
         </article>
 
-        <!-- Duplicated Slide 6 (Copy of Slide 2) -->
+        <!-- Duplicated Slide 6 -->
         <article class="panel" tabindex="0" role="button" aria-expanded="false" data-panel="5">
           <div class="panel-image" style="background-image: url('courtyard.jpg'); background-size: cover; background-position: center;"></div><div class="panel-shade"></div>
           <div class="panel-vertical"><span>06</span><span>TROPICAL COURTYARD</span></div>
           <div class="panel-content">
-            <p class="panel-kicker">06 / CLIMATE COMFORT</p><h2>Tropical<br>Courtyard</h2>
+            <p class="panel-kicker">06 / CLIMATE COMFORT</p>
+            <h2>Tropical Courtyard</h2>
+            <span class="slide-meta">2023 · Location: Kerala</span>
             <p>Seamless integration of lush internal green spaces, central water bodies, and naturally ventilated open corridors.</p>
           </div>
         </article>
 
-        <!-- Duplicated Slide 7 (Copy of Slide 3) -->
+        <!-- Duplicated Slide 7 -->
         <article class="panel" tabindex="0" role="button" aria-expanded="false" data-panel="6">
           <div class="panel-image" style="background-image: url('roof.jpg'); background-size: cover; background-position: center;"></div><div class="panel-shade"></div>
           <div class="panel-vertical"><span>07</span><span>SLOPED TILE ROOFS</span></div>
           <div class="panel-content">
-            <p class="panel-kicker">07 / MONSOON ARCHITECTURE</p><h2>Sloped Tile<br>Roofs</h2>
+            <p class="panel-kicker">07 / MONSOON ARCHITECTURE</p>
+            <h2>Sloped Tile Roofs</h2>
+            <span class="slide-meta">2023 · Location: Kerala</span>
             <p>Classic multi-tiered clay tile roofing designed to handle heavy monsoons with dramatic overhangs and thermal insulation.</p>
           </div>
         </article>
 
-        <!-- Duplicated Slide 8 (Copy of Slide 4) -->
+        <!-- Duplicated Slide 8 -->
         <article class="panel" tabindex="0" role="button" aria-expanded="false" data-panel="7">
           <div class="panel-image" style="background-image: url('verandah.jpg'); background-size: cover; background-position: center;"></div><div class="panel-shade"></div>
           <div class="panel-vertical"><span>08</span><span>VERANDAH & JALI SCREENS</span></div>
           <div class="panel-content">
-            <p class="panel-kicker">08 / SHADING & BREEZE</p><h2>Verandah &<br>Jali Screens</h2>
+            <p class="panel-kicker">08 / SHADING & BREEZE</p>
+            <h2>Verandah & Jali Screens</h2>
+            <span class="slide-meta">2023 · Location: Kerala</span>
             <p>Expansive semi-outdoor seating porches paired with intricate terracotta jali ventilation blocks for privacy and airflow.</p>
           </div>
         </article>
