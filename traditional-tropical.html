@@ -28,9 +28,19 @@
       flex-basis: auto !important;
       margin-bottom: 20px !important;
       display: block !important;
+      background: transparent !important;
     }
 
-    /* Force the panel's internal wrapper and content box to be completely transparent */
+    /* Make background image wrappers and shades completely transparent */
+    .panel-image,
+    .panel-shade {
+      background: transparent !important;
+      background-image: none !important;
+      opacity: 0 !important;
+      display: none !important;
+    }
+
+    /* Force the panel's internal wrappers and content boxes to be completely transparent */
     .panel > div, 
     .panel-content {
       background: transparent !important;
