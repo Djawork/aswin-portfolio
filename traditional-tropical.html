@@ -30,14 +30,22 @@
       display: block !important;
     }
 
-    /* Transparent text box background matching the dark theme */
+    /* Completely remove background box for Slide 1 text content */
+    .panel:nth-child(1) .panel-content {
+      background: transparent !important;
+      backdrop-filter: none !important;
+      border-radius: 0 !important;
+      padding: 0 !important;
+    }
+
+    /* Standard text box styles for other panels */
     .panel-content {
       position: absolute !important;
       top: 100px !important;
       left: 0 !important;
       padding: 30px 40px !important;
-      background: rgba(40, 40, 43, 0.85) !important; /* Semi-transparent background */
-      backdrop-filter: blur(8px) !important; /* Optional blur effect for depth */
+      background: rgba(40, 40, 43, 0.85) !important;
+      backdrop-filter: blur(8px) !important;
       border-radius: 0 12px 12px 0 !important;
       bottom: auto !important;
       right: auto !important;
@@ -79,7 +87,7 @@
 
     <section class="work-section" aria-label="Traditional design categories">
       <div class="accordion" id="accordion">
-        <!-- Slide 1 (Restored photo background with custom palette) -->
+        <!-- Slide 1 (Transparent text background with custom palette) -->
         <article class="panel" tabindex="0" role="button">
           <div class="panel-image" style="background-image: url('1_Photo - 8.jpg'); background-size: cover; background-position: center;"></div>
           <div class="panel-shade"></div>
