@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   
-  <!-- Clean Vertical Feed Styles with Left-Aligned Text -->
+  <!-- Clean Vertical Feed Styles with Solid Background -->
   <style>
     .accordion {
       display: flex !important;
@@ -30,12 +30,14 @@
       display: block !important;
     }
 
-    /* Force text box strictly to the left edge */
+    /* Force text box strictly to the left edge with a solid dark background */
     .panel-content {
       position: absolute !important;
       top: 100px !important;
       left: 0 !important;
-      padding-left: 40px !important;
+      padding: 30px 40px !important;
+      background: #050505 !important; /* Solid black background */
+      border-radius: 0 12px 12px 0 !important;
       bottom: auto !important;
       right: auto !important;
       transform: none !important;
@@ -84,8 +86,6 @@
             <h2>Traditional House</h2>
             <span class="slide-meta">2023 | Kurishupara,Kerala</span>
             <p>Traditional heritage drafting and design.</p>
-            
-            <!-- Corrected filename with exact capitalization and spaces -->
             <img src="1_Photo - 8.jpg" alt="" style="width: 100%; max-width: 400px; height: auto; border-radius: 8px; margin-top: 15px; display: block;">
           </div>
         </article>
