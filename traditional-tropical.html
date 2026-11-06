@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   
-  <!-- Forced Vertical & Top-Left Styles -->
+  <!-- Clean Vertical Feed Styles -->
   <style>
     .accordion {
       display: flex !important;
@@ -27,13 +27,7 @@
       flex: none !important;
       flex-basis: auto !important;
       margin-bottom: 20px !important;
-    }
-
-    .panel-vertical {
-      writing-mode: horizontal-tb !important;
-      transform: none !important;
-      display: flex !important;
-      gap: 10px !important;
+      display: block !important;
     }
 
     /* Force text to top-left corner with increased heading size */
@@ -46,12 +40,15 @@
       transform: none !important;
       text-align: left !important;
       max-width: 600px !important;
+      opacity: 1 !important;
+      visibility: visible !important;
     }
 
     .panel-content h2 {
       font-size: 3.5rem !important;
       line-height: 1.1 !important;
       margin-bottom: 8px !important;
+      color: #fff !important;
     }
 
     .slide-meta {
@@ -78,15 +75,14 @@
 
     <section class="work-section" aria-label="Traditional design categories">
       <div class="section-heading">
-        <span>EXPLORE TRADITIONAL & TROPICAL S</span>
+        <span>EXPLORE TRADITIONAL & TROPICAL</span>
         <span class="interaction-hint">SCROLL DOWN TO EXPLORE <b>↓</b></span>
       </div>
 
       <div class="accordion" id="accordion">
-        <!-- Original Slide 1 -->
-        <article class="panel" tabindex="0" role="button" aria-expanded="false" data-panel="0">
+        <!-- Slide 1 -->
+        <article class="panel" tabindex="0" role="button">
           <div class="panel-image" style="background-image: url('1_photo-8.jpg'); background-size: cover; background-position: center;"></div><div class="panel-shade"></div>
-          <div class="panel-vertical"><span>01</span><span>TRADITIONAL HOUSE</span></div>
           <div class="panel-content">
             <p class="panel-kicker">01 / HERITAGE ARCHITECTURE</p>
             <h2>Traditional House</h2>
@@ -95,10 +91,9 @@
           </div>
         </article>
 
-        <!-- Original Slide 2 -->
-        <article class="panel" tabindex="0" role="button" aria-expanded="false" data-panel="1">
+        <!-- Slide 2 -->
+        <article class="panel" tabindex="0" role="button">
           <div class="panel-image" style="background-image: url('courtyard.jpg'); background-size: cover; background-position: center;"></div><div class="panel-shade"></div>
-          <div class="panel-vertical"><span>02</span><span>TROPICAL COURTYARD</span></div>
           <div class="panel-content">
             <p class="panel-kicker">02 / CLIMATE COMFORT</p>
             <h2>Tropical Courtyard</h2>
@@ -107,10 +102,9 @@
           </div>
         </article>
 
-        <!-- Original Slide 3 -->
-        <article class="panel" tabindex="0" role="button" aria-expanded="false" data-panel="2">
+        <!-- Slide 3 -->
+        <article class="panel" tabindex="0" role="button">
           <div class="panel-image" style="background-image: url('roof.jpg'); background-size: cover; background-position: center;"></div><div class="panel-shade"></div>
-          <div class="panel-vertical"><span>03</span><span>SLOPED TILE ROOFS</span></div>
           <div class="panel-content">
             <p class="panel-kicker">03 / MONSOON ARCHITECTURE</p>
             <h2>Sloped Tile Roofs</h2>
@@ -119,10 +113,9 @@
           </div>
         </article>
 
-        <!-- Original Slide 4 -->
-        <article class="panel" tabindex="0" role="button" aria-expanded="false" data-panel="3">
+        <!-- Slide 4 -->
+        <article class="panel" tabindex="0" role="button">
           <div class="panel-image" style="background-image: url('verandah.jpg'); background-size: cover; background-position: center;"></div><div class="panel-shade"></div>
-          <div class="panel-vertical"><span>04</span><span>VERANDAH & JALI SCREENS</span></div>
           <div class="panel-content">
             <p class="panel-kicker">04 / SHADING & BREEZE</p>
             <h2>Verandah & Jali Screens</h2>
@@ -131,10 +124,9 @@
           </div>
         </article>
 
-        <!-- Duplicated Slide 5 -->
-        <article class="panel" tabindex="0" role="button" aria-expanded="false" data-panel="4">
+        <!-- Slide 5 -->
+        <article class="panel" tabindex="0" role="button">
           <div class="panel-image" style="background-image: url('1_photo-8.jpg'); background-size: cover; background-position: center;"></div><div class="panel-shade"></div>
-          <div class="panel-vertical"><span>05</span><span>TRADITIONAL HOUSE</span></div>
           <div class="panel-content">
             <p class="panel-kicker">05 / HERITAGE ARCHITECTURE</p>
             <h2>Traditional House</h2>
@@ -143,10 +135,9 @@
           </div>
         </article>
 
-        <!-- Duplicated Slide 6 -->
-        <article class="panel" tabindex="0" role="button" aria-expanded="false" data-panel="5">
+        <!-- Slide 6 -->
+        <article class="panel" tabindex="0" role="button">
           <div class="panel-image" style="background-image: url('courtyard.jpg'); background-size: cover; background-position: center;"></div><div class="panel-shade"></div>
-          <div class="panel-vertical"><span>06</span><span>TROPICAL COURTYARD</span></div>
           <div class="panel-content">
             <p class="panel-kicker">06 / CLIMATE COMFORT</p>
             <h2>Tropical Courtyard</h2>
@@ -155,10 +146,9 @@
           </div>
         </article>
 
-        <!-- Duplicated Slide 7 -->
-        <article class="panel" tabindex="0" role="button" aria-expanded="false" data-panel="6">
+        <!-- Slide 7 -->
+        <article class="panel" tabindex="0" role="button">
           <div class="panel-image" style="background-image: url('roof.jpg'); background-size: cover; background-position: center;"></div><div class="panel-shade"></div>
-          <div class="panel-vertical"><span>07</span><span>SLOPED TILE ROOFS</span></div>
           <div class="panel-content">
             <p class="panel-kicker">07 / MONSOON ARCHITECTURE</p>
             <h2>Sloped Tile Roofs</h2>
@@ -167,10 +157,9 @@
           </div>
         </article>
 
-        <!-- Duplicated Slide 8 -->
-        <article class="panel" tabindex="0" role="button" aria-expanded="false" data-panel="7">
+        <!-- Slide 8 -->
+        <article class="panel" tabindex="0" role="button">
           <div class="panel-image" style="background-image: url('verandah.jpg'); background-size: cover; background-position: center;"></div><div class="panel-shade"></div>
-          <div class="panel-vertical"><span>08</span><span>VERANDAH & JALI SCREENS</span></div>
           <div class="panel-content">
             <p class="panel-kicker">08 / SHADING & BREEZE</p>
             <h2>Verandah & Jali Screens</h2>
