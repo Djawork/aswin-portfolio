@@ -30,14 +30,19 @@
       display: block !important;
     }
 
-    /* Completely remove the background box for text content on ALL slides */
+    /* Force the panel's internal wrapper and content box to be completely transparent */
+    .panel > div, 
     .panel-content {
       background: transparent !important;
+      background-color: transparent !important;
       backdrop-filter: none !important;
       -webkit-backdrop-filter: none !important;
-      border-radius: 0 !important;
-      padding: 0 !important;
+      border: none !important;
       box-shadow: none !important;
+    }
+
+    /* Completely remove the background box for text content on ALL slides */
+    .panel-content {
       position: absolute !important;
       top: 100px !important;
       left: 40px !important;
@@ -48,6 +53,7 @@
       max-width: 720px !important;
       opacity: 1 !important;
       visibility: visible !important;
+      padding: 0 !important;
     }
 
     .panel-content h2 {
