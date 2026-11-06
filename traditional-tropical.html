@@ -10,14 +10,38 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  
+  <!-- Custom Vertical Layout Styles for this page only -->
+  <style>
+    .accordion {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+    }
+
+    .panel {
+      position: relative;
+      width: 100%;
+      height: 100vh; /* Full screen height for each panel */
+      overflow: hidden;
+      flex: none;
+    }
+
+    .panel-vertical {
+      writing-mode: horizontal-tb;
+      transform: none;
+      display: flex;
+      gap: 10px;
+    }
+  </style>
 </head>
 <body>
   <div class="ambient ambient-one"></div>
   <div class="ambient ambient-two"></div>
   <header class="topbar">
-    <span ="font-family: inherit; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; color: #fff;">KERALA, INDIA</span>
-    <span class="top-note" ="font-size: 14px; letter-spacing: 2px;">TRADITIONAL & TROPICAL COLLECTION</span>
-    <a class="contact-link" href="mailto:artistaswin3@gmail.com" ="font-size: 12px; font-weight: 700;">LET'S TALK <span>↗</span></a>
+    <span style="font-family: inherit; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; color: #fff;">KERALA, INDIA</span>
+    <span class="top-note" style="font-size: 14px; letter-spacing: 2px;">TRADITIONAL & TROPICAL COLLECTION</span>
+    <a class="contact-link" href="mailto:artistaswin3@gmail.com" style="font-size: 12px; font-weight: 700;">LET'S TALK <span>↗</span></a>
   </header>
 
   <main id="home">
