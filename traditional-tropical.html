@@ -30,12 +30,14 @@
       display: block !important;
     }
 
-    /* Completely remove background box for Slide 1 text content */
-    .panel:nth-child(1) .panel-content {
+    /* Completely strip away background box styling for Slide 1's content */
+    article.panel:first-of-type .panel-content {
       background: transparent !important;
       backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
       border-radius: 0 !important;
       padding: 0 !important;
+      box-shadow: none !important;
     }
 
     /* Standard text box styles for other panels */
@@ -87,7 +89,7 @@
 
     <section class="work-section" aria-label="Traditional design categories">
       <div class="accordion" id="accordion">
-        <!-- Slide 1 (Transparent text background with custom palette) -->
+        <!-- Slide 1 (No background box, side-by-side image & palette) -->
         <article class="panel" tabindex="0" role="button">
           <div class="panel-image" style="background-image: url('1_Photo - 8.jpg'); background-size: cover; background-position: center;"></div>
           <div class="panel-shade"></div>
