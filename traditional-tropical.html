@@ -11,30 +11,31 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   
-  <!-- Custom Vertical Layout Styles for this page only -->
- <style>
-  .accordion {
-    display: flex !important;
-    flex-direction: column !important;
-    width: 100% !important;
-    height: auto !important;
-  }
+  <!-- Custom Vertical Fullscreen Layout Styles -->
+  <style>
+    .accordion {
+      display: flex !important;
+      flex-direction: column !important;
+      width: 100% !important;
+      height: auto !important;
+    }
 
-  .panel {
-    position: relative !important;
-    width: 100% !important;
-    height: 100vh !important;
-    flex: none !important;
-    flex-basis: auto !important;
-  }
+    .panel {
+      position: relative !important;
+      width: 100% !important;
+      height: 100vh !important;
+      flex: none !important;
+      flex-basis: auto !important;
+      margin-bottom: 20px;
+    }
 
-  .panel-vertical {
-    writing-mode: horizontal-tb !important;
-    transform: none !important;
-    display: flex !important;
-    gap: 10px !important;
-  }
-</style>
+    .panel-vertical {
+      writing-mode: horizontal-tb !important;
+      transform: none !important;
+      display: flex !important;
+      gap: 10px !important;
+    }
+  </style>
 </head>
 <body>
   <div class="ambient ambient-one"></div>
@@ -51,21 +52,21 @@
     <section class="work-section" aria-label="Traditional design categories">
       <div class="section-heading">
         <span>EXPLORE TRADITIONAL & TROPICAL S</span>
-        <span class="interaction-hint">HOVER OR SELECT A PANEL <b>↘</b></span>
+        <span class="interaction-hint">SCROLL DOWN TO EXPLORE <b>↓</b></span>
       </div>
 
       <div class="accordion" id="accordion">
-        <!-- Category 1: Traditional House -->
-        <article class="panel active" tabindex="0" role="button" aria-expanded="true" data-panel="0">
+        <!-- Original Slide 1 -->
+        <article class="panel" tabindex="0" role="button" aria-expanded="false" data-panel="0">
           <div class="panel-image" style="background-image: url('1_photo-8.jpg'); background-size: cover; background-position: center;"></div><div class="panel-shade"></div>
           <div class="panel-vertical"><span>01</span><span>TRADITIONAL HOUSE</span></div>
           <div class="panel-content">
             <p class="panel-kicker">01 / HERITAGE ARCHITECTURE</p><h2>Traditional<br>House</h2>
-            <p> Location : Kurishupara</p>
+            <p>Location : Kurishupara</p>
           </div>
         </article>
 
-        <!-- Category 2: Tropical Courtyard Villa -->
+        <!-- Original Slide 2 -->
         <article class="panel" tabindex="0" role="button" aria-expanded="false" data-panel="1">
           <div class="panel-image" style="background-image: url('courtyard.jpg'); background-size: cover; background-position: center;"></div><div class="panel-shade"></div>
           <div class="panel-vertical"><span>02</span><span>TROPICAL COURTYARD</span></div>
@@ -75,7 +76,7 @@
           </div>
         </article>
 
-        <!-- Category 3: Sloped Tile Roofs -->
+        <!-- Original Slide 3 -->
         <article class="panel" tabindex="0" role="button" aria-expanded="false" data-panel="2">
           <div class="panel-image" style="background-image: url('roof.jpg'); background-size: cover; background-position: center;"></div><div class="panel-shade"></div>
           <div class="panel-vertical"><span>03</span><span>SLOPED TILE ROOFS</span></div>
@@ -85,7 +86,7 @@
           </div>
         </article>
 
-        <!-- Category 4: Verandah & Jali Screens -->
+        <!-- Original Slide 4 -->
         <article class="panel" tabindex="0" role="button" aria-expanded="false" data-panel="3">
           <div class="panel-image" style="background-image: url('verandah.jpg'); background-size: cover; background-position: center;"></div><div class="panel-shade"></div>
           <div class="panel-vertical"><span>04</span><span>VERANDAH & JALI SCREENS</span></div>
@@ -94,8 +95,49 @@
             <p>Expansive semi-outdoor seating porches paired with intricate terracotta jali ventilation blocks for privacy and airflow.</p>
           </div>
         </article>
+
+        <!-- Duplicated Slide 5 (Copy of Slide 1) -->
+        <article class="panel" tabindex="0" role="button" aria-expanded="false" data-panel="4">
+          <div class="panel-image" style="background-image: url('1_photo-8.jpg'); background-size: cover; background-position: center;"></div><div class="panel-shade"></div>
+          <div class="panel-vertical"><span>05</span><span>TRADITIONAL HOUSE</span></div>
+          <div class="panel-content">
+            <p class="panel-kicker">05 / HERITAGE ARCHITECTURE</p><h2>Traditional<br>House</h2>
+            <p>Location : Kurishupara</p>
+          </div>
+        </article>
+
+        <!-- Duplicated Slide 6 (Copy of Slide 2) -->
+        <article class="panel" tabindex="0" role="button" aria-expanded="false" data-panel="5">
+          <div class="panel-image" style="background-image: url('courtyard.jpg'); background-size: cover; background-position: center;"></div><div class="panel-shade"></div>
+          <div class="panel-vertical"><span>06</span><span>TROPICAL COURTYARD</span></div>
+          <div class="panel-content">
+            <p class="panel-kicker">06 / CLIMATE COMFORT</p><h2>Tropical<br>Courtyard</h2>
+            <p>Seamless integration of lush internal green spaces, central water bodies, and naturally ventilated open corridors.</p>
+          </div>
+        </article>
+
+        <!-- Duplicated Slide 7 (Copy of Slide 3) -->
+        <article class="panel" tabindex="0" role="button" aria-expanded="false" data-panel="6">
+          <div class="panel-image" style="background-image: url('roof.jpg'); background-size: cover; background-position: center;"></div><div class="panel-shade"></div>
+          <div class="panel-vertical"><span>07</span><span>SLOPED TILE ROOFS</span></div>
+          <div class="panel-content">
+            <p class="panel-kicker">07 / MONSOON ARCHITECTURE</p><h2>Sloped Tile<br>Roofs</h2>
+            <p>Classic multi-tiered clay tile roofing designed to handle heavy monsoons with dramatic overhangs and thermal insulation.</p>
+          </div>
+        </article>
+
+        <!-- Duplicated Slide 8 (Copy of Slide 4) -->
+        <article class="panel" tabindex="0" role="button" aria-expanded="false" data-panel="7">
+          <div class="panel-image" style="background-image: url('verandah.jpg'); background-size: cover; background-position: center;"></div><div class="panel-shade"></div>
+          <div class="panel-vertical"><span>08</span><span>VERANDAH & JALI SCREENS</span></div>
+          <div class="panel-content">
+            <p class="panel-kicker">08 / SHADING & BREEZE</p><h2>Verandah &<br>Jali Screens</h2>
+            <p>Expansive semi-outdoor seating porches paired with intricate terracotta jali ventilation blocks for privacy and airflow.</p>
+          </div>
+        </article>
+
       </div>
-      <p class="mobile-hint">Tap a panel to explore. Tap another to switch.</p>
+      <p class="mobile-hint">Scroll down to view each project panel.</p>
     </section>
 
     <section class="about" id="about">
@@ -112,6 +154,5 @@
     <span style="font-size: 15px;">ARCHITECTURAL DRAFTING · 3D DESIGNING</span>
     <a href="#home" style="font-size: 15px;">BACK TO TOP ↑</a>
   </footer>
-  <script src="script.js"></script>
 </body>
 </html>
