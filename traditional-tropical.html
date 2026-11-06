@@ -12,28 +12,29 @@
   <link rel="stylesheet" href="style.css">
   
   <!-- Custom Vertical Layout Styles for this page only -->
-  <style>
-    .accordion {
-      display: flex;
-      flex-direction: column;
-      width: 100%;
-    }
+ <style>
+  .accordion {
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100% !important;
+    height: auto !important;
+  }
 
-    .panel {
-      position: relative;
-      width: 100%;
-      height: 100vh; /* Full screen height for each panel */
-      overflow: hidden;
-      flex: none;
-    }
+  .panel {
+    position: relative !important;
+    width: 100% !important;
+    height: 100vh !important;
+    flex: none !important;
+    flex-basis: auto !important;
+  }
 
-    .panel-vertical {
-      writing-mode: horizontal-tb;
-      transform: none;
-      display: flex;
-      gap: 10px;
-    }
-  </style>
+  .panel-vertical {
+    writing-mode: horizontal-tb !important;
+    transform: none !important;
+    display: flex !important;
+    gap: 10px !important;
+  }
+</style>
 </head>
 <body>
   <div class="ambient ambient-one"></div>
