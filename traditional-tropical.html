@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   
-  <!-- Custom Vertical Fullscreen & Top-Left Alignment Styles -->
+  <!-- Forced Vertical & Top-Left Styles -->
   <style>
     .accordion {
       display: flex !important;
@@ -26,7 +26,7 @@
       height: 100vh !important;
       flex: none !important;
       flex-basis: auto !important;
-      margin-bottom: 20px;
+      margin-bottom: 20px !important;
     }
 
     .panel-vertical {
@@ -36,30 +36,31 @@
       gap: 10px !important;
     }
 
-    /* Move text to top-left corner and increase heading size */
+    /* Force text to top-left corner with increased heading size */
     .panel-content {
       position: absolute !important;
-      top: 80px !important;
-      left: 40px !important;
+      top: 100px !important;
+      left: 60px !important;
       bottom: auto !important;
       right: auto !important;
+      transform: none !important;
       text-align: left !important;
-      max-width: 600px;
+      max-width: 600px !important;
     }
 
     .panel-content h2 {
-      font-size: 3.5rem !important; /* Increased heading size */
+      font-size: 3.5rem !important;
       line-height: 1.1 !important;
-      margin-bottom: 10px !important;
+      margin-bottom: 8px !important;
     }
 
     .slide-meta {
-      font-size: 0.9rem;
-      letter-spacing: 1.5px;
-      color: #aaa;
-      text-transform: uppercase;
-      margin-bottom: 12px;
-      display: block;
+      font-size: 0.95rem !important;
+      letter-spacing: 1.5px !important;
+      color: #aaa !important;
+      text-transform: uppercase !important;
+      margin-bottom: 12px !important;
+      display: block !important;
     }
   </style>
 </head>
