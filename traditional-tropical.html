@@ -91,19 +91,19 @@
       display: block !important;
     }
 
-    /* Automatically stretch color palette to match image height and space out circles */
+    /* ADJUST PALETTE CONTAINER SPACING & HEIGHT */
     .palette-container {
       display: flex !important;
       flex-direction: column !important;
       justify-content: space-between !important;
-      height: 100% !important;
       align-self: stretch !important;
+      padding: 4px 0 !important; /* Adds a bit of breathing room top and bottom */
     }
 
     /* CONTROL PALETTE CIRCLE SIZE HERE */
     .palette-circle {
-      width: 32px !important;
-      height: 32px !important;
+      width: 28px !important;
+      height: 28px !important;
       border-radius: 50% !important;
       border: 2px solid rgba(255,255,255,0.2) !important;
     }
