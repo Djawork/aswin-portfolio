@@ -30,25 +30,17 @@
       display: block !important;
     }
 
-    /* Completely strip away background box styling for Slide 1's content */
-    article.panel:first-of-type .panel-content {
+    /* Completely remove the background box for text content on ALL slides */
+    .panel-content {
       background: transparent !important;
       backdrop-filter: none !important;
       -webkit-backdrop-filter: none !important;
       border-radius: 0 !important;
       padding: 0 !important;
       box-shadow: none !important;
-    }
-
-    /* Standard text box styles for other panels */
-    .panel-content {
       position: absolute !important;
       top: 100px !important;
-      left: 0 !important;
-      padding: 30px 40px !important;
-      background: rgba(40, 40, 43, 0.85) !important;
-      backdrop-filter: blur(8px) !important;
-      border-radius: 0 12px 12px 0 !important;
+      left: 40px !important;
       bottom: auto !important;
       right: auto !important;
       transform: none !important;
@@ -89,7 +81,7 @@
 
     <section class="work-section" aria-label="Traditional design categories">
       <div class="accordion" id="accordion">
-        <!-- Slide 1 (No background box, side-by-side image & palette) -->
+        <!-- Slide 1 -->
         <article class="panel" tabindex="0" role="button">
           <div class="panel-image" style="background-image: url('1_Photo - 8.jpg'); background-size: cover; background-position: center;"></div>
           <div class="panel-shade"></div>
@@ -116,7 +108,7 @@
           </div>
         </article>
 
-        <!-- Slide 2 (Keeps original background photo) -->
+        <!-- Slide 2 -->
         <article class="panel" tabindex="0" role="button">
           <div class="panel-image" style="background-image: url('courtyard.jpg'); background-size: cover; background-position: center;"></div>
           <div class="panel-shade"></div>
@@ -128,7 +120,7 @@
           </div>
         </article>
 
-        <!-- Slide 3 (Keeps original background photo) -->
+        <!-- Slide 3 -->
         <article class="panel" tabindex="0" role="button">
           <div class="panel-image" style="background-image: url('roof.jpg'); background-size: cover; background-position: center;"></div>
           <div class="panel-shade"></div>
@@ -140,7 +132,7 @@
           </div>
         </article>
 
-        <!-- Slide 4 (Keeps original background photo) -->
+        <!-- Slide 4 -->
         <article class="panel" tabindex="0" role="button">
           <div class="panel-image" style="background-image: url('verandah.jpg'); background-size: cover; background-position: center;"></div>
           <div class="panel-shade"></div>
@@ -152,7 +144,7 @@
           </div>
         </article>
 
-        <!-- Slide 5 (Keeps original background photo) -->
+        <!-- Slide 5 -->
         <article class="panel" tabindex="0" role="button">
           <div class="panel-image" style="background-image: url('1_photo-8.jpg'); background-size: cover; background-position: center;"></div>
           <div class="panel-shade"></div>
