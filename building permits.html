@@ -4,18 +4,105 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="theme-color" content="#050505">
-  <meta name="description" content="Building Permits — Aswin Biju">
+  <meta name="description" content="Building Permits Collection — Aswin Biju">
   <title>Building Permits — Aswin Biju</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
+  
+  <!-- Clean Vertical Feed Styles -->
+  <style>
+    .accordion {
+      display: flex !important;
+      flex-direction: column !important;
+      width: 100% !important;
+      height: auto !important;
+    }
+
+    .panel {
+      position: relative !important;
+      width: 100% !important;
+      height: 100vh !important;
+      flex: none !important;
+      flex-basis: auto !important;
+      margin-bottom: 20px !important;
+      display: block !important;
+      background: transparent !important;
+    }
+
+    /* Make background image wrappers and shades completely transparent */
+    .panel-image,
+    .panel-shade {
+      background: transparent !important;
+      background-image: none !important;
+      opacity: 0 !important;
+      display: none !important;
+    }
+
+    /* Force the panel's internal wrappers and content boxes to be completely transparent */
+    .panel > div, 
+    .panel-content {
+      background: transparent !important;
+      background-color: transparent !important;
+      backdrop-filter: none !important;
+      -webkit-backdrop-filter: none !important;
+      border: none !important;
+      box-shadow: none !important;
+    }
+
+    /* Completely remove the background box for text content on ALL slides */
+    .panel-content {
+      position: absolute !important;
+      top: 25px !important;
+      left: 60px !important;
+      bottom: 25px !important;
+      right: auto !important;
+      transform: none !important;
+      text-align: left !important;
+      max-width: 720px !important;
+      opacity: 1 !important;
+      visibility: visible !important;
+      padding: 0 !important;
+    }
+
+    .panel-kicker {
+      font-size: 2.2rem !important;
+      letter-spacing: 2px !important;
+      color: #888 !important;
+      text-transform: uppercase !important;
+      margin-bottom: 8px !important;
+    }
+
+    .panel-content h2 {
+      font-size: 3.5rem !important;
+      line-height: 1.1 !important;
+      margin-bottom: 8px !important;
+      color: #fff !important;
+    }
+
+    .slide-meta {
+      font-size: 0.95rem !important;
+      letter-spacing: 1.5px !important;
+      color: #aaa !important;
+      text-transform: uppercase !important;
+      margin-bottom: 12px !important;
+      display: block !important;
+    }
+
+    /* CONTROL IMAGE SIZE HERE: Change max-width to make the image bigger or smaller */
+    .panel-content img {
+      width: 100% !important;
+      max-width: 3000px !important; 
+      height: auto !important;
+      border-radius: 8px !important;
+      display: block !important;
+    }
+  </style>
 </head>
 <body>
-
   <div class="ambient ambient-one"></div>
   <div class="ambient ambient-two"></div>
-
   <header class="topbar">
     <span style="font-family: inherit; font-size: 12px; font-weight: 700; letter-spacing: 1.5px; color: #fff;">KERALA, INDIA</span>
     <span class="top-note" style="font-size: 14px; letter-spacing: 2px;">BUILDING PERMITS COLLECTION</span>
@@ -25,60 +112,10 @@
   <main id="home">
     <section class="intro"></section>
 
-    <section class="work-section" aria-label="Building permit services">
-      <div class="section-heading">
-        <span>EXPLORE PERMIT SERVICES</span>
-      </div>
-
+    <section class="work-section" aria-label="Building permit projects">
       <div class="accordion" id="accordion">
-        <!-- Panel 01 -->
-        <article class="panel active" tabindex="0" role="button" aria-expanded="true" data-panel="0">
-          <div class="panel-image" style="background-image: url('1_Photo%20-%208.jpg');"></div>
-          <div class="panel-shade"></div>
-          <div class="panel-vertical"><span>01</span><span>BUILDING PERMITS</span></div>
-          <div class="panel-content">
-            <p class="panel-kicker">01 / STATUTORY APPROVALS</p>
-            <h2>Building<br>Permits</h2>
-            <p>Preparation and submission of licensed architectural drawings compliant with local self-government bylaws and zoning regulations.</p>
-            <a href="mailto:artistaswin3@gmail.com" class="panel-cta">INQUIRE ABOUT THIS <span>↗</span></a>
-          </div>
-        </article>
-
-        <!-- Panel 02 -->
-        <article class="panel" tabindex="0" role="button" aria-expanded="false" data-panel="1">
-          <div class="panel-image" style="background-image: url('ARUN%20RAJ%20MADATHI_2%20-%20Photo.jpg');"></div>
-          <div class="panel-shade"></div>
-          <div class="panel-vertical"><span>02</span><span>POST-PERMIT PROCESSES</span></div>
-          <div class="panel-content">
-            <p class="panel-kicker">02 / COMPLIANCE &amp; CERTIFICATES</p>
-            <h2>Post-Permit<br>Documentation</h2>
-            <p>Assistance with occupancy certificates, completion plans, revisions, regularization filings, and clearance documentation.</p>
-            <a href="mailto:artistaswin3@gmail.com" class="panel-cta">INQUIRE ABOUT THIS <span>↗</span></a>
-          </div>
-        </article>
-      </div>
-
-      <p class="mobile-hint">Tap a panel to explore. Tap another to switch.</p>
-    </section>
-
-    <section class="about" id="about">
-      <div>
-        <p class="eyebrow"><span class="eyebrow-line"></span> PORTFOLIO NAVIGATION</p>
-        <h2>Back to main<br><em>overview.</em></h2>
-      </div>
-      <div>
-        <p style="color: #999; font-size: 14px; line-height: 2; margin-bottom: 25px;">Return to the home portfolio to explore exterior designs, interior spaces, and technical plans.</p>
-        <a class="big-mail" href="index.html" style="font-size: 11px; padding: 0 0 8px;">BACK TO HOME <span>↗</span></a>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    <span style="font-size: 15px;">© 2023 ASWIN</span>
-    <span style="font-size: 15px;">ARCHITECTURAL DRAFTING · 3D DESIGNING</span>
-    <a href="#home" style="font-size: 15px;">BACK TO TOP ↑</a>
-  </footer>
-
-  <script src="script.js"></script>
-</body>
-</html>
+        
+        <!-- Slide 1 -->
+        <article class="panel" tabindex="0" role="button">
+          <div class="panel-image" style="background-image: url('1_Photo%20-%208.jpg'); background-size: cover; background-position: center;"></div>
+          <div class="panel-shade">
