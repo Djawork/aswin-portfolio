@@ -126,21 +126,74 @@
       display: block !important;
       margin-top: 12px !important;
     }
-    /* About text above the image in Slide 01 */
-    .house-about {
-      font-size: 0.95rem !important;
-      line-height: 1.7 !important;
-      color: #b5b5b5 !important;
-      margin-bottom: 18px !important;
-      max-width: 95% !important;
+    
+   /* Image wrapper in Slide 01 so the about text sits directly on top of the image */
+    .featured-image-wrap {
+      position: relative !important;
+      width: 100% !important;
+      margin-top: 16px !important;
+      border-radius: 8px !important;
+      overflow: hidden !important;
     }
 
-    /* Reduced opacity for Slide 01 image (0.0 = invisible, 1.0 = full) */
-    .split-col:first-child img {
-      opacity: 0.55 !important;
+    .featured-image-wrap img {
+      width: 100% !important;
+      height: auto !important;
+      display: block !important;
+      margin-top: 0 !important;
+      opacity: 0.42 !important;
       transition: opacity 0.4s ease !important;
     }
 
+    /* Text placed directly over the image in Slide 01 */
+    .image-overlay-text {
+      position: absolute !important;
+      bottom: 28px !important;
+      left: 28px !important;
+      right: 28px !important;
+      z-index: 2 !important;
+      background: transparent !important;
+    }
+
+    .image-overlay-text h2 {
+      font-size: 2.5rem !important;
+      line-height: 1.12 !important;
+      margin-bottom: 6px !important;
+      color: #ffffff !important;
+      text-shadow: 0 2px 14px rgba(0, 0, 0, 0.85) !important;
+    }
+
+    .image-overlay-text .slide-meta {
+      margin-bottom: 10px !important;
+      color: #d8d8d8 !important;
+      text-shadow: 0 2px 10px rgba(0, 0, 0, 0.85) !important;
+    }
+
+    .house-about {
+      font-size: 0.95rem !important;
+      line-height: 1.65 !important;
+      color: #f0f0f0 !important;
+      margin: 0 !important;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.9) !important;
+    }
+
+    /* Headings for every image inside Slide 02 */
+    .sheet-heading {
+      font-size: 1.25rem !important;
+      font-weight: 700 !important;
+      letter-spacing: 0.5px !important;
+      color: #ffffff !important;
+      margin-top: 28px !important;
+      margin-bottom: 8px !important;
+    }
+
+    .sheet-heading:first-of-type {
+      margin-top: 14px !important;
+    }
+
+    .split-col + .split-col .sheet-heading + img {
+      margin-top: 0 !important;
+    }
     @media (max-width: 900px) {
       .panel {
         padding: 32px 24px !important;
@@ -182,26 +235,41 @@
         <!-- Row 1: Slide 01 (Fixed) & Slide 02 (Scrollable) -->
         <article class="panel" tabindex="0">
           <div class="split-slide">
-            <!-- Left Half (Fixed) -->
-         <div class="split-col">
-           <p class="panel-kicker">01</p>
-           <h2>House of Dileesh</h2>
-           <span class="slide-meta">2025 | Kerala, India</span>
-           <p class="house-about">
-             A traditional-tropical residence designed for Kerala's climate, combining sloped terracotta roofs, natural ventilation, and Vastu-compliant spatial planning approved for residential construction.
-           </p>
-           <img src="dileesh.png" alt="Residential Building Permit Drawing">
-         </div>
+            <!-- Left Half (Fixed with text placed on the image) -->
+            <div class="split-col">
+              <p class="panel-kicker">01</p>
+              <div class="featured-image-wrap">
+                <img src="dileesh.png" alt="House of Dileesh">
+                <div class="image-overlay-text">
+                  <h2>House of Dileesh</h2>
+                  <span class="slide-meta">2025 | Kerala, India</span>
+                  <p class="house-about">
+                    A traditional-tropical residence designed for Kerala's climate, combining sloped terracotta roofs, natural ventilation, and Vastu-compliant spatial planning approved for residential construction.
+                  </p>
+                </div>
+              </div>
+            </div>
 
-            <!-- Right Half (Scrollable up & down) -->
+            <!-- Right Half (Scrollable up & down with headings above every image) -->
             <div class="split-col">
               <p class="panel-kicker">02</p>
+
+              <h3 class="sheet-heading">01. Site &amp; Location Plan</h3>
               <img src="ARUN%20RAJ%20MADATHI_2%20-%20Photo.jpg" alt="Site and Floor Plan Submission">
-              <!-- Add more images below inside Slide 02 to scroll through them -->
+
+              <h3 class="sheet-heading">02. Ground Floor Plan</h3>
               <img src="dileesh.png" alt="Floor Plan Detail">
+
+              <h3 class="sheet-heading">03. First Floor Plan</h3>
               <img src="pns.png" alt="Permit Sheet 02">
+
+              <h3 class="sheet-heading">04. Front &amp; Side Elevations</h3>
               <img src="karthikeyan.png" alt="Permit Sheet 03">
+
+              <h3 class="sheet-heading">05. Cross-Section &amp; Roof Plan</h3>
               <img src="kurishupara%20(2).png" alt="Permit Sheet 04">
+
+              <h3 class="sheet-heading">06. Joinery &amp; Area Statement</h3>
               <img src="vishnu%20nellimattom.png" alt="Permit Sheet 05">
             </div>
           </div>
