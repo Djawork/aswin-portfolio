@@ -143,31 +143,37 @@
       align-items: start;
     }
 
-    .about-heading {
-      font-size: clamp(2.6rem, 4.8vw, 4.5rem);
-      font-weight: 500;
-      line-height: 1.05;
-      letter-spacing: -0.02em;
-      margin-bottom: 18px;
-    }
-
-    .role-subtitle {
-      font-size: 12px;
-      letter-spacing: 0.18em;
-      text-transform: uppercase;
-      color: #9a9a9a;
-      line-height: 1.6;
-      margin-bottom: 28px;
+    .profile-header {
+      display: flex;
+      align-items: center;
+      gap: 28px;
+      margin-top: 8px;
     }
 
     .profile-img {
-      width: 100%;
-      max-width: 240px;
-      height: auto;
-      display: block;
-      margin-top: 8px;
-      border: 1px solid #1f1f1f;
+      width: 150px;
+      height: 190px;
       object-fit: cover;
+      object-position: top center;
+      border: 1px solid #262626;
+      flex-shrink: 0;
+    }
+
+    .about-heading {
+      font-size: clamp(2.6rem, 4.5vw, 4.2rem);
+      font-weight: 500;
+      line-height: 1.02;
+      letter-spacing: -0.02em;
+      margin-bottom: 12px;
+    }
+
+    .role-subtitle {
+      font-size: 11px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #9a9a9a;
+      line-height: 1.7;
+      margin-bottom: 0;
     }
 
     .about-copy p {
@@ -328,13 +334,17 @@
         grid-template-columns: 1fr;
         gap: 32px;
       }
-      .profile-img {
-        max-width: 100%;
-      }
       footer {
         flex-direction: column;
         gap: 16px;
         text-align: center;
+      }
+    }
+
+    @media (max-width: 540px) {
+      .profile-header {
+        flex-direction: column;
+        align-items: flex-start;
       }
     }
   </style>
@@ -357,8 +367,13 @@
     <div class="container about-grid">
       <div>
         <div class="eyebrow">01 / LITTLE ABOUT ME</div>
-        <h1 class="about-heading">ASWIN</h1>
-        <img src="PASSPORT SIZE PHOTO.jpg" alt="Aswin" class="profile-img" />
+        <div class="profile-header">
+          <img src="PASSPORT%20SIZE%20PHOTO.jpg" alt="Aswin" class="profile-img" />
+          <div>
+            <h1 class="about-heading">ASWIN</h1>
+            <p class="role-subtitle">ARCHITECTURAL DESIGN<br>3D VISUALIZATION<br>BUILDING PERMIT DOCUMENTATION</p>
+          </div>
+        </div>
       </div>
 
       <div class="about-copy">
@@ -439,4 +454,67 @@
 
         <div class="service-card">
           <span class="service-num">03</span>
-          <h3>3D Architectural Visualization
+          <h3>3D Architectural Visualization</h3>
+          <p>
+            Creation of realistic exterior and interior visualizations, transforming architectural concepts into compelling visual presentations through detailed modelling, materials, lighting and landscaping.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <span class="service-num">04</span>
+          <h3>Architectural Drafting</h3>
+          <p>
+            Preparation of accurate technical drawings, including floor plans, elevations, sections and other architectural documentation required for project development and presentation.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 5. Design Approach & Professional Vision -->
+  <section class="content-section">
+    <div class="container">
+      <div class="two-col-blocks">
+        <div class="block-item">
+          <div class="eyebrow">05 / DESIGN APPROACH</div>
+          <p>
+            Every project begins with understanding the site, the client's requirements and the functional purpose of the proposed space.
+          </p>
+          <p>
+            Through a considered process of planning, drafting, design development and visualization, Aswin aims to transform initial concepts into clear, practical and visually engaging architectural solutions.
+          </p>
+          <p>
+            The integration of contemporary design approaches with traditional Vastu principles provides an additional dimension to the planning process, allowing architectural functionality and cultural considerations to work together.
+          </p>
+        </div>
+
+        <div class="block-item">
+          <div class="eyebrow">06 / PROFESSIONAL VISION</div>
+          <p>
+            To deliver thoughtful architectural planning, precise technical documentation and high-quality visual experiences that contribute to better-designed living environments.
+          </p>
+          <p>
+            Through continuous learning, creative exploration and professional commitment, Aswin strives to develop architectural solutions that combine design excellence, practicality and visual distinction.
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA & Exact Same Footer as index.html -->
+  <section class="cta-section">
+    <div class="container cta-inner">
+      <div class="eyebrow">HAVE A PROJECT IN MIND?</div>
+      <h2>Let's create something meaningful.</h2>
+      <a href="mailto:artistaswin3@gmail.com" class="cta-link">GET IN TOUCH ↗</a>
+    </div>
+  </section>
+
+  <footer>
+    <span>© 2023 ASWIN</span>
+    <span>ARCHITECTURAL DRAFTING · 3D DESIGNING</span>
+    <a href="#top">BACK TO TOP ↑</a>
+  </footer>
+
+</body>
+</html>
