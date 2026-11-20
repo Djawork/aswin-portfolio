@@ -105,17 +105,13 @@
       to { opacity: 1; }
     }
 
-    /* 2. Scroll-Down About Section */
-    .about-section {
-      padding: 130px 6%;
+    /* Shared Section & Eyebrow Styling */
+    .content-section {
+      padding: 110px 6%;
       border-bottom: 1px solid #1f1f1f;
     }
 
-    .about-grid {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 60px;
-      align-items: start;
+    .container {
       max-width: 1300px;
       margin: 0 auto;
     }
@@ -139,64 +135,172 @@
       background-color: #666666;
     }
 
-    .about-heading {
-      font-size: clamp(2.4rem, 4.5vw, 4.2rem);
-      font-weight: 400;
-      line-height: 1.08;
-      letter-spacing: -0.02em;
+    /* 2. Intro & Bio Section */
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1.15fr;
+      gap: 64px;
+      align-items: start;
     }
 
-    .about-heading span {
-      display: block;
-      color: #7a7a7a;
+    .about-heading {
+      font-size: clamp(2.6rem, 4.8vw, 4.5rem);
+      font-weight: 500;
+      line-height: 1.05;
+      letter-spacing: -0.02em;
+      margin-bottom: 18px;
+    }
+
+    .role-subtitle {
+      font-size: 12px;
+      letter-spacing: 0.18em;
+      text-transform: uppercase;
+      color: #9a9a9a;
+      line-height: 1.6;
+      margin-bottom: 28px;
+    }
+
+    .lead-statement {
+      font-size: 20px;
+      font-weight: 500;
+      line-height: 1.55;
+      color: #ffffff;
     }
 
     .about-copy p {
       font-size: 16px;
-      line-height: 1.75;
+      line-height: 1.8;
       color: #c8c8c8;
-      margin-bottom: 24px;
+      margin-bottom: 22px;
     }
 
-    /* Details / Tools / Focus Sub-Grid */
-    .details-grid {
+    .about-copy p:last-child {
+      margin-bottom: 0;
+    }
+
+    /* 3. Design Philosophy Section */
+    .philosophy-quote {
+      font-size: clamp(1.4rem, 2.4vw, 2rem);
+      font-weight: 400;
+      font-style: italic;
+      line-height: 1.45;
+      color: #ffffff;
+      margin-bottom: 28px;
+      padding-left: 24px;
+      border-left: 2px solid #555555;
+    }
+
+    /* 4. Areas of Expertise Grid */
+    .expertise-list {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 18px 36px;
+      list-style: none;
+      margin-top: 12px;
+    }
+
+    .expertise-list li {
+      font-size: 15px;
+      color: #e0e0e0;
+      padding: 14px 0;
+      border-bottom: 1px solid #1a1a1a;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .expertise-list li::before {
+      content: "—";
+      color: #666666;
+      font-size: 12px;
+    }
+
+    /* 5. Professional Services Grid */
+    .services-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 40px;
+      margin-top: 12px;
+    }
+
+    .service-card {
+      padding: 36px;
+      border: 1px solid #1f1f1f;
+      background-color: #090909;
+    }
+
+    .service-num {
+      font-size: 11px;
+      letter-spacing: 0.2em;
+      color: #7a7a7a;
+      margin-bottom: 14px;
+      display: block;
+    }
+
+    .service-card h3 {
+      font-size: 16px;
+      font-weight: 600;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: #ffffff;
+      margin-bottom: 14px;
+    }
+
+    .service-card p {
+      font-size: 15px;
+      line-height: 1.75;
+      color: #bdbdbd;
+    }
+
+    /* 6. Design Approach & Professional Vision */
+    .two-col-blocks {
       display: grid;
       grid-template-columns: 1fr 1fr;
-      gap: 32px;
-      margin-top: 48px;
-      padding-top: 36px;
+      gap: 64px;
+    }
+
+    .block-item p {
+      font-size: 16px;
+      line-height: 1.8;
+      color: #c8c8c8;
+      margin-bottom: 20px;
+    }
+
+    /* 7. Sign-Off Banner */
+    .signoff-box {
+      margin-top: 72px;
+      padding-top: 48px;
       border-top: 1px solid #1f1f1f;
     }
 
-    .detail-box h3 {
-      font-size: 11px;
-      letter-spacing: 0.18em;
+    .signoff-name {
+      font-size: 22px;
+      font-weight: 700;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
-      color: #7a7a7a;
-      margin-bottom: 14px;
-      font-weight: 500;
-    }
-
-    .detail-box ul {
-      list-style: none;
-    }
-
-    .detail-box li {
-      font-size: 14px;
-      color: #e0e0e0;
       margin-bottom: 8px;
-      line-height: 1.5;
     }
 
-    /* 3. CTA & Exact Same Footer as index.html */
+    .signoff-roles {
+      font-size: 12px;
+      letter-spacing: 0.16em;
+      text-transform: uppercase;
+      color: #9a9a9a;
+      margin-bottom: 16px;
+    }
+
+    .signoff-tagline {
+      font-size: 14px;
+      font-style: italic;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: #e0e0e0;
+    }
+
+    /* 8. CTA & Exact Same Footer as index.html */
     .cta-section {
       padding: 110px 6% 90px;
       border-bottom: 1px solid #1f1f1f;
-    }
-
-    .cta-inner {
-      max-width: 1300px;
-      margin: 0 auto;
     }
 
     .cta-inner h2 {
@@ -238,10 +342,19 @@
       text-decoration: none;
     }
 
+    @media (max-width: 960px) {
+      .expertise-list {
+        grid-template-columns: repeat(2, 1fr);
+      }
+    }
+
     @media (max-width: 820px) {
-      .about-grid, .details-grid {
+      .about-grid,
+      .services-grid,
+      .two-col-blocks,
+      .expertise-list {
         grid-template-columns: 1fr;
-        gap: 36px;
+        gap: 32px;
       }
       footer {
         flex-direction: column;
@@ -256,62 +369,160 @@
   <!-- Minimal Navigation -->
   <header class="top-bar">
     <a href="/aswin-portfolio/index.html">← BACK TO HOME</a>
-    <span>05 / ABOUT ME</span>
   </header>
 
   <!-- Full-Screen Signature Fade-In Section -->
   <section class="signature-hero">
-    <!-- NOTE: If your PNG is inside an 'images/' folder instead of the root folder, change src to "images/Elegant%20White%20Cursive%20Signature.png" -->
     <img src="Elegant%20White%20Cursive%20Signature.png" alt="Aswin Biju Signature" class="signature-img" />
     <a href="#about-content" class="scroll-cue">SCROLL DOWN ↓</a>
   </section>
 
-  <!-- Scroll-Down About Section -->
-  <section id="about-content" class="about-section">
-    <div class="about-grid">
+  <!-- 1. Overview & Bio -->
+  <section id="about-content" class="content-section">
+    <div class="container about-grid">
       <div>
-        <div class="eyebrow">A LITTLE ABOUT ME</div>
-        <h1 class="about-heading">
-          Design-minded.
-          <span>Detail-driven.</span>
-        </h1>
+        <div class="eyebrow">01 / PROFILE</div>
+        <h1 class="about-heading">ASWIN</h1>
+        <p class="role-subtitle">ARCHITECTURAL DESIGN &nbsp;|&nbsp; 3D VISUALIZATION &nbsp;|&nbsp; BUILDING PERMIT DOCUMENTATION</p>
+        <p class="lead-statement">
+          Creating meaningful spaces through thoughtful planning, technical precision and innovative architectural visualization.
+        </p>
       </div>
 
       <div class="about-copy">
         <p>
-          I’m Aswin Biju, an Architectural Drafting and 3D Designing practitioner based in Kerala, India. Since 2023, I have been focused on turning architectural concepts into clear, accurate working drawings and atmospheric visual presentations.
+          Aswin is a Professional 3D Visualizer and Architectural Draftsman specializing in architectural planning, building permit documentation and photorealistic architectural visualization. His professional approach combines technical expertise, creative exploration and an understanding of traditional planning principles to deliver architectural solutions that balance functionality, aesthetics and practical requirements.
         </p>
         <p>
-          My work spans residential exterior perspectives, interior mood and lighting studies, technical floor plans, and Local Self Government (LSGD) permit &amp; post-permit documentation—bridging creative spatial storytelling with buildable precision.
+          With authorization to prepare building permit drawings within his applicable licensing scope, he undertakes architectural drafting and documentation for residential projects, translating design concepts into detailed technical drawings suitable for regulatory submissions.
         </p>
+        <p>
+          An integral aspect of his planning approach is the incorporation of Vastu principles, thoughtfully integrating traditional spatial guidelines with contemporary architectural design requirements. This approach aims to create environments that respond to individual needs while maintaining spatial harmony, comfort and functionality.
+        </p>
+      </div>
+    </div>
+  </section>
 
-        <div class="details-grid">
-          <div class="detail-box">
-            <h3>Core Focus</h3>
-            <ul>
-              <li>Exterior &amp; Interior 3D Visualization</li>
-              <li>Architectural Drafting &amp; Working Plans</li>
-              <li>LSGD Permit &amp; Post-Permit Approvals</li>
-              <li>Residential &amp; Tropical Design</li>
-            </ul>
-          </div>
+  <!-- 2. Design Philosophy -->
+  <section class="content-section">
+    <div class="container about-grid">
+      <div>
+        <div class="eyebrow">02 / DESIGN PHILOSOPHY</div>
+        <blockquote class="philosophy-quote">
+          “Great architecture begins with thoughtful planning and evolves through creativity, precision and an understanding of the spaces we inhabit.”
+        </blockquote>
+      </div>
 
-          <div class="detail-box">
-            <h3>Location &amp; Practice</h3>
-            <ul>
-              <li>Kerala, India</li>
-              <li>Active Since · 2023</li>
-              <li>Residential &amp; Commercial Projects</li>
-            </ul>
-          </div>
+      <div class="about-copy">
+        <p>
+          Aswin believes that every building should reflect a balance between its architectural identity, functional requirements and surrounding environment.
+        </p>
+        <p>
+          His design philosophy emphasizes intelligent space planning, natural lighting, ventilation, material selection and spatial relationships. By combining contemporary architectural concepts with Vastu-based planning principles, he aims to develop spaces that are aesthetically refined, functionally efficient and contextually appropriate.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 3. Areas of Expertise -->
+  <section class="content-section">
+    <div class="container">
+      <div class="eyebrow">03 / AREAS OF EXPERTISE</div>
+      <ul class="expertise-list">
+        <li>Architectural Planning and Residential Design</li>
+        <li>Building Permit Drawings and Documentation</li>
+        <li>Licensed Architectural Drafting Services</li>
+        <li>Vastu-Based Building Planning</li>
+        <li>2D Architectural Drafting</li>
+        <li>Photorealistic 3D Exterior Visualization</li>
+        <li>3D Interior Visualization</li>
+        <li>Architectural 3D Modelling and Rendering</li>
+        <li>Floor Plans, Elevations and Sections</li>
+        <li>Landscape and Site Development</li>
+        <li>Architectural Presentation and Visualization</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 4. Professional Services -->
+  <section class="content-section">
+    <div class="container">
+      <div class="eyebrow">04 / PROFESSIONAL SERVICES</div>
+      <div class="services-grid">
+        <div class="service-card">
+          <span class="service-num">01</span>
+          <h3>Architectural Planning &amp; Design</h3>
+          <p>
+            Development of residential building plans with an emphasis on functional space utilization, architectural aesthetics, practical requirements and Vastu-based planning considerations.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <span class="service-num">02</span>
+          <h3>Building Permit Drawings</h3>
+          <p>
+            Preparation of detailed building drawings and supporting documentation for permit applications, in accordance with applicable local building regulations and the scope of professional authorization.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <span class="service-num">03</span>
+          <h3>3D Architectural Visualization</h3>
+          <p>
+            Creation of realistic exterior and interior visualizations, transforming architectural concepts into compelling visual presentations through detailed modelling, materials, lighting and landscaping.
+          </p>
+        </div>
+
+        <div class="service-card">
+          <span class="service-num">04</span>
+          <h3>Architectural Drafting</h3>
+          <p>
+            Preparation of accurate technical drawings, including floor plans, elevations, sections and other architectural documentation required for project development and presentation.
+          </p>
         </div>
       </div>
     </div>
   </section>
 
-  <!-- Same Bottom CTA & Footer as index.html -->
+  <!-- 5. Design Approach & Professional Vision -->
+  <section class="content-section">
+    <div class="container">
+      <div class="two-col-blocks">
+        <div class="block-item">
+          <div class="eyebrow">05 / DESIGN APPROACH</div>
+          <p>
+            Every project begins with understanding the site, the client's requirements and the functional purpose of the proposed space.
+          </p>
+          <p>
+            Through a considered process of planning, drafting, design development and visualization, Aswin aims to transform initial concepts into clear, practical and visually engaging architectural solutions.
+          </p>
+          <p>
+            The integration of contemporary design approaches with traditional Vastu principles provides an additional dimension to the planning process, allowing architectural functionality and cultural considerations to work together.
+          </p>
+        </div>
+
+        <div class="block-item">
+          <div class="eyebrow">06 / PROFESSIONAL VISION</div>
+          <p>
+            To deliver thoughtful architectural planning, precise technical documentation and high-quality visual experiences that contribute to better-designed living environments.
+          </p>
+          <p>
+            Through continuous learning, creative exploration and professional commitment, Aswin strives to develop architectural solutions that combine design excellence, practicality and visual distinction.
+          </p>
+        </div>
+      </div>
+
+      <div class="signoff-box">
+        <div class="signoff-name">ASWIN</div>
+        <div class="signoff-roles">Professional 3D Visualizer &nbsp;|&nbsp; Architectural Draftsman &nbsp;|&nbsp; Building Permit Drawing Professional</div>
+        <div class="signoff-tagline">DESIGN WITH PURPOSE. PLAN WITH PRECISION. VISUALIZE WITH EXCELLENCE.</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Bottom CTA & Exact Same Footer as index.html -->
   <section class="cta-section">
-    <div class="cta-inner">
+    <div class="container cta-inner">
       <div class="eyebrow">HAVE A PROJECT IN MIND?</div>
       <h2>Let's create something meaningful.</h2>
       <a href="mailto:artistaswin3@gmail.com" class="cta-link">GET IN TOUCH ↗</a>
