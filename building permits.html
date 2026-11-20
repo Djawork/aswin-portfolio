@@ -126,7 +126,19 @@
       display: block !important;
       margin-top: 12px !important;
     }
-    
+    /* Horizontal row for 01 + House of Dileesh at the top */
+    .slide-top-header {
+      display: flex !important;
+      align-items: baseline !important;
+      gap: 18px !important;
+      margin-bottom: 6px !important;
+    }
+
+    .slide-top-header .panel-kicker,
+    .slide-top-header h2 {
+      margin: 0 !important;
+      padding: 0 !important;
+    }
    /* Image wrapper in Slide 01 so the about text sits directly on top of the image */
     .featured-image-wrap {
       position: relative !important;
@@ -239,14 +251,16 @@
         <!-- Row 1: Slide 01 (Fixed) & Slide 02 (Scrollable) -->
         <article class="panel" tabindex="0">
           <div class="split-slide">
-            <!-- Left Half (Fixed with text placed on the image) -->
+            <!-- Left Half (Fixed) -->
             <div class="split-col">
-              <p class="panel-kicker">01</p>
+              <div class="slide-top-header">
+                <p class="panel-kicker">01</p>
+                <h2>House of Dileesh</h2>
+              </div>
+              <span class="slide-meta">2025 | Kerala, India</span>
               <div class="featured-image-wrap">
                 <img src="dileesh.png" alt="House of Dileesh">
                 <div class="image-overlay-text">
-                  <h2>House of Dileesh</h2>
-                  <span class="slide-meta">2025 | Kerala, India</span>
                   <p class="house-about">
                     A traditional-tropical residence designed for Kerala's climate, combining sloped terracotta roofs, natural ventilation, and Vastu-compliant spatial planning approved for residential construction.
                   </p>
