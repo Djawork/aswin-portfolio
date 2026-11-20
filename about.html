@@ -3,7 +3,11 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#050505" />
   <title>About Me — Aswin Biju</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <style>
     * {
       margin: 0;
@@ -13,13 +17,13 @@
 
     html {
       scroll-behavior: smooth;
-      background-color: #0b0b0b;
+      background-color: #050505;
       color: #ffffff;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+      font-family: 'Manrope', 'DM Sans', -apple-system, BlinkMacSystemFont, sans-serif;
     }
 
     body {
-      background-color: #0b0b0b;
+      background-color: #050505;
       color: #ffffff;
       overflow-x: hidden;
     }
@@ -34,17 +38,18 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-size: 11px;
-      letter-spacing: 0.18em;
+      font-size: 12px;
+      font-weight: 700;
+      letter-spacing: 1.5px;
       text-transform: uppercase;
       z-index: 100;
-      background: linear-gradient(to bottom, rgba(11, 11, 11, 0.9), transparent);
+      background: linear-gradient(to bottom, rgba(5, 5, 5, 0.92), transparent);
     }
 
     .top-bar a {
       color: #ffffff;
       text-decoration: none;
-      opacity: 0.8;
+      opacity: 0.85;
       transition: opacity 0.3s ease;
     }
 
@@ -65,14 +70,12 @@
     }
 
     .signature-img {
-      max-width: 380px;
+      max-width: 400px;
       width: 70%;
       height: auto;
       opacity: 0;
       transform: translateY(14px);
       animation: signatureFadeIn 2s cubic-bezier(0.22, 1, 0.36, 1) forwards;
-      /* UNCOMMENT the line below ONLY if your signature.png has black ink and needs to turn white: */
-      /* filter: invert(1) brightness(2); */
     }
 
     @keyframes signatureFadeIn {
@@ -102,7 +105,7 @@
       to { opacity: 1; }
     }
 
-    /* 2. Scroll-Down About Section (Matches your homepage layout) */
+    /* 2. Scroll-Down About Section */
     .about-section {
       padding: 130px 6%;
       border-bottom: 1px solid #1f1f1f;
@@ -185,7 +188,7 @@
       line-height: 1.5;
     }
 
-    /* 3. CTA & Exact Same Footer */
+    /* 3. CTA & Exact Same Footer as index.html */
     .cta-section {
       padding: 110px 6% 90px;
       border-bottom: 1px solid #1f1f1f;
@@ -204,7 +207,8 @@
 
     .cta-link {
       display: inline-block;
-      font-size: 11px;
+      font-size: 12px;
+      font-weight: 700;
       letter-spacing: 0.2em;
       text-transform: uppercase;
       color: #ffffff;
@@ -223,8 +227,8 @@
       display: flex;
       justify-content: space-between;
       align-items: center;
-      font-size: 11px;
-      letter-spacing: 0.16em;
+      font-size: 13px;
+      letter-spacing: 0.14em;
       text-transform: uppercase;
       color: #7a7a7a;
     }
@@ -251,14 +255,14 @@
 
   <!-- Minimal Navigation -->
   <header class="top-bar">
-    <a href="index.html">← BACK TO HOME</a>
+    <a href="/aswin-portfolio/index.html">← BACK TO HOME</a>
     <span>05 / ABOUT ME</span>
   </header>
 
   <!-- Full-Screen Signature Fade-In Section -->
   <section class="signature-hero">
-    <!-- Replace 'images/signature.png' with the exact path to your signature file -->
-    <img src="images/signature.png" alt="Aswin Biju Signature" class="signature-img" />
+    <!-- NOTE: If your PNG is inside an 'images/' folder instead of the root folder, change src to "images/Elegant%20White%20Cursive%20Signature.png" -->
+    <img src="Elegant%20White%20Cursive%20Signature.png" alt="Aswin Biju Signature" class="signature-img" />
     <a href="#about-content" class="scroll-cue">SCROLL DOWN ↓</a>
   </section>
 
@@ -310,12 +314,13 @@
     <div class="cta-inner">
       <div class="eyebrow">HAVE A PROJECT IN MIND?</div>
       <h2>Let's create something meaningful.</h2>
-      <a href="index.html#contact" class="cta-link">GET IN TOUCH ↗</a>
+      <a href="mailto:artistaswin3@gmail.com" class="cta-link">GET IN TOUCH ↗</a>
     </div>
   </section>
 
   <footer>
-    <span>© 2023 ASWIN ARCHITECTURAL DRAFTING · 3D DESIGNING</span>
+    <span>© 2023 ASWIN</span>
+    <span>ARCHITECTURAL DRAFTING · 3D DESIGNING</span>
     <a href="#top">BACK TO TOP ↑</a>
   </footer>
 
