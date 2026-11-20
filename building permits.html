@@ -11,7 +11,7 @@
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   
-  <!-- Clean Vertical Feed with 2-Column Split Slides -->
+  <!-- Clean Vertical Feed with 2-Column Split Slides (Left Fixed, Right Scrollable) -->
   <style>
     .accordion {
       display: flex !important;
@@ -49,7 +49,8 @@
       grid-template-columns: 1fr 1fr !important;
       gap: 48px !important;
       width: 100% !important;
-      align-items: start !important;
+      height: calc(100vh - 120px) !important;
+      align-items: stretch !important;
     }
 
     .split-col {
@@ -61,11 +62,37 @@
       box-shadow: none !important;
       padding: 0 !important;
       text-align: left !important;
+      height: 100% !important;
     }
 
+    /* Left column (Slide 01): stays fixed, no scrolling */
+    .split-col:first-child {
+      overflow: hidden !important;
+    }
+
+    /* Right column (Slide 02): scrolls up and down independently */
     .split-col + .split-col {
       border-left: 1px solid #1f1f1f !important;
       padding-left: 48px !important;
+      padding-right: 12px !important;
+      padding-bottom: 32px !important;
+      overflow-y: auto !important;
+      overscroll-behavior: contain;
+    }
+
+    /* Subtle dark scrollbar for Slide 02 */
+    .split-col + .split-col::-webkit-scrollbar {
+      width: 4px;
+    }
+    .split-col + .split-col::-webkit-scrollbar-track {
+      background: transparent;
+    }
+    .split-col + .split-col::-webkit-scrollbar-thumb {
+      background: #333333;
+      border-radius: 4px;
+    }
+    .split-col + .split-col::-webkit-scrollbar-thumb:hover {
+      background: #666666;
     }
 
     .panel-kicker {
@@ -106,7 +133,13 @@
       }
       .split-slide {
         grid-template-columns: 1fr !important;
+        height: auto !important;
         gap: 36px !important;
+      }
+      .split-col:first-child,
+      .split-col + .split-col {
+        height: auto !important;
+        overflow: visible !important;
       }
       .split-col + .split-col {
         border-left: none !important;
@@ -117,7 +150,7 @@
     }
   </style>
 </head>
-  <body>
+<body>
   <div class="ambient ambient-one"></div>
   <div class="ambient ambient-two"></div>
   <header class="topbar">
@@ -132,10 +165,10 @@
     <section class="work-section" aria-label="Building permit projects">
       <div class="accordion" id="accordion">
         
-        <!-- Slide 1 (Split into 2 Vertical Halves) -->
+        <!-- Row 1: Slide 01 (Fixed) & Slide 02 (Scrollable) -->
         <article class="panel" tabindex="0">
           <div class="split-slide">
-            <!-- Left Half -->
+            <!-- Left Half (Fixed) -->
             <div class="split-col">
               <p class="panel-kicker">01</p>
               <h2>Residential Building Permit</h2>
@@ -143,20 +176,22 @@
               <img src="1_Photo%20-%208.jpg" alt="Residential Building Permit Drawing">
             </div>
 
-            <!-- Right Half -->
+            <!-- Right Half (Scrollable up & down) -->
             <div class="split-col">
               <p class="panel-kicker">02</p>
               <h2>Site &amp; Floor Plan Submission</h2>
               <span class="slide-meta">2024 | Kerala, India</span>
               <img src="ARUN%20RAJ%20MADATHI_2%20-%20Photo.jpg" alt="Site and Floor Plan Submission">
+              <!-- Add more images below inside Slide 02 to scroll through them -->
+              <img src="dileesh.png" alt="Floor Plan Detail">
             </div>
           </div>
         </article>
 
-        <!-- Slide 2 (Split into 2 Vertical Halves) -->
+        <!-- Row 2: Slide 03 (Fixed) & Slide 04 (Scrollable) -->
         <article class="panel" tabindex="0">
           <div class="split-slide">
-            <!-- Left Half -->
+            <!-- Left Half (Fixed) -->
             <div class="split-col">
               <p class="panel-kicker">03</p>
               <h2>Elevation &amp; Section Drawings</h2>
@@ -164,12 +199,14 @@
               <img src="dileesh.png" alt="Elevation and Section Drawings">
             </div>
 
-            <!-- Right Half -->
+            <!-- Right Half (Scrollable up & down) -->
             <div class="split-col">
               <p class="panel-kicker">04</p>
               <h2>Approved Permit Documentation</h2>
               <span class="slide-meta">2025 | Kerala, India</span>
               <img src="pns.png" alt="Approved Permit Documentation">
+              <!-- Add more images below inside Slide 04 to scroll through them -->
+              <img src="karthikeyan.png" alt="Permit Sheet Detail">
             </div>
           </div>
         </article>
