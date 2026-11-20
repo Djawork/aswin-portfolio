@@ -126,6 +126,20 @@
       display: block !important;
       margin-top: 12px !important;
     }
+    /* About text above the image in Slide 01 */
+    .house-about {
+      font-size: 0.95rem !important;
+      line-height: 1.7 !important;
+      color: #b5b5b5 !important;
+      margin-bottom: 18px !important;
+      max-width: 95% !important;
+    }
+
+    /* Reduced opacity for Slide 01 image (0.0 = invisible, 1.0 = full) */
+    .split-col:first-child img {
+      opacity: 0.55 !important;
+      transition: opacity 0.4s ease !important;
+    }
 
     @media (max-width: 900px) {
       .panel {
