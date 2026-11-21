@@ -231,6 +231,54 @@
         padding-top: 36px !important;
       }
     }
+
+    /* Make right-column images look clickable */
+    .split-col + .split-col img {
+      cursor: zoom-in;
+      transition: transform 0.2s ease, opacity 0.2s ease;
+    }
+
+    .split-col + .split-col img:hover {
+      opacity: 0.9;
+    }
+
+    /* Full-screen Lightbox Modal */
+    .lightbox-modal {
+      display: none;
+      position: fixed;
+      z-index: 9999;
+      inset: 0;
+      background-color: rgba(5, 5, 5, 0.92);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+      justify-content: center;
+      align-items: center;
+      padding: 24px;
+      cursor: zoom-out;
+    }
+
+    .lightbox-modal.active {
+      display: flex;
+    }
+
+    .lightbox-modal img {
+      max-width: 95vw;
+      max-height: 92vh;
+      object-fit: contain;
+      border-radius: 6px;
+      box-shadow: 0 12px 40px rgba(0, 0, 0, 0.8);
+    }
+
+    .lightbox-close {
+      position: absolute;
+      top: 20px;
+      right: 32px;
+      color: #fff;
+      font-size: 32px;
+      font-weight: 400;
+      cursor: pointer;
+      line-height: 1;
+    }
   </style>
 </head>
 <body>
@@ -284,13 +332,13 @@
               <img src="08 site plan.jpg" alt="Permit Sheet 03">
 
               <h3 class="sheet-heading">05. Service Plan</h3>
-              <img src=08 service plan.jpg" alt="Permit Sheet 04">
+              <img src="08 service plan.jpg" alt="Permit Sheet 04">
 
               <h3 class="sheet-heading">06. Elevation Sketch</h3>
-              <img src="08 elevation sketch.jpg" alt="Permit Sheet 05">
+              <img src="08 elevation sketch.png" alt="Permit Sheet 05">
 
               <h3 class="sheet-heading">07. Section Sketch</h3>
-              <img src="08 section sketch.jpg" alt="Permit Sheet 06">
+              <img src="08 section sketch.png" alt="Permit Sheet 06">
 
                <h3 class="sheet-heading">08. Landscape</h3>
               <img src="dileesh.png" alt="Permit Sheet 06">
@@ -347,5 +395,37 @@
     <span style="font-size: 15px;">ARCHITECTURAL DRAFTING · 3D DESIGNING</span>
     <a href="#home" style="font-size: 15px;">BACK TO TOP ↑</a>
   </footer>
+
+  <!-- Full-screen Image Lightbox -->
+  <div class="lightbox-modal" id="lightboxModal">
+    <span class="lightbox-close" id="lightboxClose">&times;</span>
+    <img id="lightboxImg" src="" alt="Full screen preview">
+  </div>
+
+  <script>
+    const modal = document.getElementById('lightboxModal');
+    const modalImg = document.getElementById('lightboxImg');
+
+    // Target all images inside the scrollable right columns
+    document.querySelectorAll('.split-col + .split-col img').forEach(img => {
+      img.addEventListener('click', () => {
+        modalImg.src = img.src;
+        modalImg.alt = img.alt;
+        modal.classList.add('active');
+      });
+    });
+
+    // Close when clicking the X button or anywhere on the dark background
+    modal.addEventListener('click', () => {
+      modal.classList.remove('active');
+    });
+
+    // Close when pressing the Escape key
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('active')) {
+        modal.classList.remove('active');
+      }
+    });
+  </script>
 </body>
 </html>
